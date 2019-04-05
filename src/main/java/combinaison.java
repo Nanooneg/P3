@@ -89,12 +89,24 @@ public class combinaison {
 
     /**
      * Crée une combinaison aléatoire
+     * @param nombreDeCase nombre de case que comporte la combinaison à générer
      * @return la combinaison aléatoire
      */
-    public String randomModele (int min, int max){
+    public String randomModele (int nombreDeCase){
 
-        int random = min + (int)(Math.random() * ((max - min) + 1));
-        String nombreAleatoire = String.valueOf(random);
+        int combinaisonRandom[]= new int[nombreDeCase];
+        int min = 0, max = 9;
+        int i;
+        // choix aleatoire de chiffres pour chaques cases de la combinaison à définir
+        for (i=0; i<nombreDeCase; i++) {
+            combinaisonRandom[i] = min + (int) (Math.random() * ((max - min) + 1));
+        }
+        // lecture de chaques valeurs de case et ajout à ma chaine de caractére à renvoyer
+        int j;
+        String nombreAleatoire = "";
+        for (j=0; j<nombreDeCase; j++) {
+            nombreAleatoire += String.valueOf(combinaisonRandom[j]);
+        }
         return nombreAleatoire;
     }
 
