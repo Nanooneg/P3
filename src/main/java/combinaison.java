@@ -4,6 +4,7 @@ public class combinaison {
 
     private Scanner sc = new Scanner(System.in);
 
+
     /**
      * affiche la combinaison masquée
      * XXXX au départ pui +=+- en fonction des réponses du joueur défenseur
@@ -90,10 +91,9 @@ public class combinaison {
      * Crée une combinaison aléatoire
      * @return la combinaison aléatoire
      */
-    public String randomModele (){
-        int Min = 0;
-        int Max = 9999;
-        int random = Min + (int)(Math.random() * ((Max - Min) + 1));
+    public String randomModele (int min, int max){
+
+        int random = min + (int)(Math.random() * ((max - min) + 1));
         String nombreAleatoire = String.valueOf(random);
         return nombreAleatoire;
     }

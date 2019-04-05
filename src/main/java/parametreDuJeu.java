@@ -1,4 +1,4 @@
-public class presentationDuJeu {
+public class parametreDuJeu {
     /**
      * affiche une présentation du jeu recherche +/-
      */
@@ -19,7 +19,4 @@ public class presentationDuJeu {
         System.out.println("----------------------------------------------------------------------");
     }
 
-    public static void clearConsole(){
-
-    }
 }

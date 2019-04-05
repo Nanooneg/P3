@@ -38,14 +38,14 @@ combinaison            mere
 		demander()  try/catch bon nombre de chiffre   mettre dans variable de type tableau[4]
 		comparer()  comparer les données des deux tableau indice par indice et afficher en fonction +,- ou = dans combinaison modèle
 		
-presentationDuJeu
+parametreDuJeu
 	afficher()      afficher le but du jeu
 	
 nombreDeCoupRestant
 	afficher()      20 au départ 
 
 recherchePlusOuMoins
-	presentationDuJeu.afficher()
+	parametreDuJeu.afficher()
 	combinaisonAttaquant.demander()
 	boucle :
 		combinaisonModele.afficher()
