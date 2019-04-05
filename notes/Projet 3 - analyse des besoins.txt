@@ -1,0 +1,62 @@
+=====================ANALYSE DES BESOINS======================
+
+--------------------------------------------------------------
+            2 jeux : RECHERCHE +/-   et   MASTERMIND
+--------------------------------------------------------------
+
+
++/- // STEP 1 base du jeu combinaison 4 chiffres
+_____________________________________________
+
+<<<déroulement>>>
+
+demander à l'attaquant de donner une série de 4 chiffres
+vérifier que l'attaquant donne bien une série de 4 chiffres
+l'insérer dans une variable
+la découper en caractére ou chiffre
+afficher un modéle de réponse de 4 caractère ( XXXX )
+afficher le nombre d'esssai disponible : 20 au départ
+le defenseur fait une proposition de réponse
+vérifier que le défenseur donne bien une réponse à 4 chiffres
+la découper en caractère ou chiffre
+comparer les caractères à ceux de l'attaquant
+afficher dans le modéle les +, - ou = ( +=+- )
+compter un tour de plus et afficher le nombre d'essai restant
+boucler les 5 dernière ligne jusqu'a avoir 4 signe "="
+afficher la bonne combinaison quand elle est trouvée ou quand le nombre limité 
+-d'essai est atteind
+
+<<<besoins>>>
+
+combinaison            mere
+	combinaisonModele     fille
+		afficher()	( XXXX ) au départ puis ( +=+- ) après comparaison entre combinaison attaquant/defenseur
+	combinaisonAttaquant  fille
+		afficher()  afficher quand combinaison defenseur == combinaison attaquant
+		demander()  try/catch bon nombre de chiffre   mettre dans variable de type tableau[4]
+	combinaisonDefenseur  fille
+		demander()  try/catch bon nombre de chiffre   mettre dans variable de type tableau[4]
+		comparer()  comparer les données des deux tableau indice par indice et afficher en fonction +,- ou = dans combinaison modèle
+		
+presentationDuJeu
+	afficher()      afficher le but du jeu
+	
+nombreDeCoupRestant
+	afficher()      20 au départ 
+
+recherchePlusOuMoins
+	presentationDuJeu.afficher()
+	combinaisonAttaquant.demander()
+	boucle :
+		combinaisonModele.afficher()
+		nombreDeCoupRestant.afficher()
+		combinaisonDefenseur.demander()
+		combinaisonDefenseur.comparer()
+		nombreDeCoup ++
+	combinaisonAttaquant.afficher()
+	
+	
+	--> refléchir aux type de variable en parametre et retour <--
+	
+	
+
