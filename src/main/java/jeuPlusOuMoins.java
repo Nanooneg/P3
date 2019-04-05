@@ -1,3 +1,7 @@
+import java.io.IOException;
+
+import static java.lang.Runtime.getRuntime;
+
 public class jeuPlusOuMoins {
 
     public static void main(String[] args) {
@@ -8,9 +12,9 @@ public class jeuPlusOuMoins {
         String cbnD = "";
         String cbnM = "XXXX";
         presentationDuJeu.presenter();
-        cbnA = cbn.demanderAttaquant(R);
+        cbnA = cbn.randomModele();
 
-        while (cbnA != cbnD && R != 0) {
+        while ( !cbnA.equals(cbnD) && R != 0) {
             cbn.afficherModele(cbnM,R);
             cbnD = cbn.demanderDefenseur(R);
             i++;
@@ -19,6 +23,6 @@ public class jeuPlusOuMoins {
         }
 
         cbn.afficherResultat(cbnA, R, i);
-    }
 
+    }
 }

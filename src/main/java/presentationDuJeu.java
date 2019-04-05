@@ -18,4 +18,8 @@ public class presentationDuJeu {
         System.out.println("----------------------------------------------------------------------");
         System.out.println("----------------------------------------------------------------------");
     }
+
+    public static void clearConsole(){
+
+    }
 }

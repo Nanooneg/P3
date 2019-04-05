@@ -85,4 +85,17 @@ public class combinaison {
 
         return modele;
     }
+
+    /**
+     * Crée une combinaison aléatoire
+     * @return la combinaison aléatoire
+     */
+    public String randomModele (){
+        int Min = 0;
+        int Max = 9999;
+        int random = Min + (int)(Math.random() * ((Max - Min) + 1));
+        String nombreAleatoire = String.valueOf(random);
+        return nombreAleatoire;
+    }
+
 }
