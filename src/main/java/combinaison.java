@@ -10,11 +10,17 @@ public class combinaison {
      * XXXX au départ pui +=+- en fonction des réponses du joueur défenseur
      * @param modele modéle masqué à afficher
      * @param nbr nombre de coup(s) restant
+     * @param level nombre de case de la combinaison
      */
-    public void afficherModele(String modele, int nbr) {
-        if (nbr == 20)
-            System.out.println("XXXX");
-        else
+    public void afficherModele(String modele, int nbr, int level) {
+        if (nbr == 20) {
+            String modelDeBase = "";
+            int i;
+            for (i = 0; i < level; i++){
+                modelDeBase += "X";
+            }
+                System.out.println(modelDeBase);
+        }else
             System.out.println(modele);
     }
 
@@ -66,16 +72,17 @@ public class combinaison {
      * = si le chiffre est le bon
      * @param strA combinaison à prendre en modèle
      * @param strD combinaison à comparer au modéle
+     * @param level nombre de case de la combinaison
      * @return modéle sous forme de +=+-
      */
-    public String comparer (String strA, String strD){
+    public String comparer (String strA, String strD, int level){
 
         String modele = "";
         char[] chiffreModele = strA.toCharArray();
         char[] chiffreAcomparer = strD.toCharArray();
 
         int i;
-        for (i=0; i<4; i++) {
+        for (i=0; i<level; i++) {
             if (chiffreModele[i] < chiffreAcomparer[i])
                 modele += "-";
             else if (chiffreModele[i] > chiffreAcomparer[i])

@@ -1,3 +1,5 @@
+import java.io.*;
+
 public class parametreDuJeu {
     /**
      * affiche une présentation du jeu recherche +/-
