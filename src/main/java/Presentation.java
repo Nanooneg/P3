@@ -1,4 +1,4 @@
-public class parametreDuJeu {
+public class Presentation {
     /**
      * affiche une présentation du jeu recherche +/-
      */
@@ -7,7 +7,7 @@ public class parametreDuJeu {
         System.out.println("");
         System.out.println("");
         System.out.println("             Bienvenur dans le jeu <<< Recherche +/- >>>              ");
-        System.out.println("       Trouver la bonne combinaison en un nombre maximal d'essai      ");
+        System.out.println("       Trouver la bonne Combinaison en un nombre maximal d'essai      ");
         System.out.println("");
         System.out.println("      A chaque coup, si vous n'avez pas trouveé la bonne réponse,     ");
         System.out.println("         L'ordinateur vous donne des indices dans un modèle :         ");

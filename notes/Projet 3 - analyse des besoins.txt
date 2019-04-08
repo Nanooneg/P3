@@ -5,7 +5,7 @@
 --------------------------------------------------------------
 
 
-+/- // STEP 1 base du jeu combinaison 4 chiffres
++/- // STEP 1 base du jeu Combinaison 4 chiffres
 _____________________________________________
 
 <<<déroulement>>>
@@ -23,23 +23,23 @@ comparer les caractères à ceux de l'attaquant
 afficher dans le modéle les +, - ou = ( +=+- )
 compter un tour de plus et afficher le nombre d'essai restant
 boucler les 5 dernière ligne jusqu'a avoir 4 signe "="
-afficher la bonne combinaison quand elle est trouvée ou quand le nombre limité 
+afficher la bonne Combinaison quand elle est trouvée ou quand le nombre limité
 -d'essai est atteind
 
 <<<besoins>>>
 
-combinaison
+Combinaison
     afficher
     demander
     comparer
     generer
 		
-parametreDuJeu
+Presentation
 	afficher()      afficher le but du jeu
 
 
 recherchePlusOuMoins
-	parametreDuJeu.afficher()
+	Presentation.afficher()
 	combinaisonAttaquant.demander() ou generer()
 	boucle :
 		combinaisonModele.afficher()
