@@ -1,16 +1,17 @@
 import java.io.IOException;
 import java.util.Properties;
 
-public class jeuPlusOuMoins {
+public class Main {
 
     public static void main(String[] args) {
 
+        //declaration des paramètres
         int level = 0;
         int coupMax = 0;
         boolean developpeur = false;
 
         try {
-            //chargement des propriétés
+            //chargement des paramètres
             Properties properties = chargementPropriete.chargement("C:\\Users\\arnau\\Documents\\Doc Arnaud\\OpenClassrooms\\A rendre\\P3\\src\\properties\\config.properties");
             coupMax = Integer.parseInt(properties.getProperty("coupMax", "vide"));
             level = Integer.parseInt(properties.getProperty("caseCombinaison", "vide"));
@@ -19,24 +20,28 @@ public class jeuPlusOuMoins {
             e.printStackTrace();
         }
 
+        //déclaration variables et objet combinaison
         combinaison cbn = new combinaison();
         int coupRestant = coupMax;
         int essai = 0;
-        String cbnA;
-        String cbnD = "";
-        String cbnM = "XXXX";
-        parametreDuJeu.presenter();
-        cbnA = cbn.randomModele(level);
+        String combinaisonA;
+        String combinaisonD = "";
+        String modele = "";
 
-        while ( !cbnA.equals(cbnD) && coupRestant != 0) {
-            cbn.afficherModele(cbnM,coupRestant,coupMax,level,developpeur,cbnA);
-            cbnD = cbn.demanderDefenseur(coupRestant);
-            cbnM = cbn.comparer(cbnA,cbnD,level);
+        //présentation du jeu et récupération d'une combinaison générée aléatoirement
+        parametreDuJeu.presenter();
+        combinaisonA = cbn.genererModele(level);
+
+        //boucle de déroulement du jeu : affichage du mogèle -> réponse du defenseur -> comparaison
+        while ( !combinaisonA.equals(combinaisonD) && coupRestant != 0) {
+            cbn.afficherModele(modele,coupRestant,coupMax,level,developpeur,combinaisonA);
+            combinaisonD = cbn.demanderDefenseur(coupRestant,coupMax,level);
+            modele = cbn.comparer(combinaisonA,combinaisonD,level);
             coupRestant--;
             essai++;
         }
-
-        cbn.afficherResultat(cbnA,coupRestant,essai);
+        // fin du jeu affichage de la solution
+        cbn.afficherResultat(combinaisonA,coupRestant,essai);
 
     }
 }

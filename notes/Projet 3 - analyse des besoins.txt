@@ -28,25 +28,19 @@ afficher la bonne combinaison quand elle est trouvée ou quand le nombre limité
 
 <<<besoins>>>
 
-combinaison            mere
-	combinaisonModele     fille
-		afficher()	( XXXX ) au départ puis ( +=+- ) après comparaison entre combinaison attaquant/defenseur
-	combinaisonAttaquant  fille
-		afficher()  afficher quand combinaison defenseur == combinaison attaquant
-		demander()  try/catch bon nombre de chiffre   mettre dans variable de type tableau[4]
-	combinaisonDefenseur  fille
-		demander()  try/catch bon nombre de chiffre   mettre dans variable de type tableau[4]
-		comparer()  comparer les données des deux tableau indice par indice et afficher en fonction +,- ou = dans combinaison modèle
+combinaison
+    afficher
+    demander
+    comparer
+    generer
 		
 parametreDuJeu
 	afficher()      afficher le but du jeu
-	
-nombreDeCoupRestant
-	afficher()      20 au départ 
+
 
 recherchePlusOuMoins
 	parametreDuJeu.afficher()
-	combinaisonAttaquant.demander()
+	combinaisonAttaquant.demander() ou generer()
 	boucle :
 		combinaisonModele.afficher()
 		nombreDeCoupRestant.afficher()
@@ -57,6 +51,16 @@ recherchePlusOuMoins
 	
 	
 	--> refléchir aux type de variable en parametre et retour <--
+
+
+A FAIRE
+
+    creer class Main
+    creer class jeu
+    renommer Main en challenger qui etend jeu
+    creer class defenseur qui etend jeu
+    creer class duel qui etend jeu
+
 	
 	
 
