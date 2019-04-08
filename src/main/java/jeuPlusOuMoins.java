@@ -6,34 +6,37 @@ public class jeuPlusOuMoins {
     public static void main(String[] args) {
 
         int level = 0;
-        int essai = 0;
+        int coupMax = 0;
+        boolean developpeur = false;
 
         try {
             //chargement des propriétés
             Properties properties = chargementPropriete.chargement("C:\\Users\\arnau\\Documents\\Doc Arnaud\\OpenClassrooms\\A rendre\\P3\\src\\properties\\config.properties");
-            essai = Integer.parseInt(properties.getProperty("coupMax", "vide"));
+            coupMax = Integer.parseInt(properties.getProperty("coupMax", "vide"));
             level = Integer.parseInt(properties.getProperty("caseCombinaison", "vide"));
+            developpeur = Boolean.parseBoolean(properties.getProperty("developpeur", "vide"));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         combinaison cbn = new combinaison();
+        int coupRestant = coupMax;
+        int essai = 0;
         String cbnA;
         String cbnD = "";
         String cbnM = "XXXX";
         parametreDuJeu.presenter();
         cbnA = cbn.randomModele(level);
-        int i = 0;
 
-        while ( !cbnA.equals(cbnD) && essai != 0) {
-            cbn.afficherModele(cbnM,essai,level);
-            cbnD = cbn.demanderDefenseur(essai);
-            i++;
+        while ( !cbnA.equals(cbnD) && coupRestant != 0) {
+            cbn.afficherModele(cbnM,coupRestant,coupMax,level,developpeur,cbnA);
+            cbnD = cbn.demanderDefenseur(coupRestant);
             cbnM = cbn.comparer(cbnA,cbnD,level);
-            essai--;
+            coupRestant--;
+            essai++;
         }
 
-        cbn.afficherResultat(cbnA,essai,i);
+        cbn.afficherResultat(cbnA,coupRestant,essai);
 
     }
 }
