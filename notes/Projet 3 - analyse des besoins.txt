@@ -56,10 +56,21 @@ recherchePlusOuMoins
 A FAIRE
 
     creer class Main
-    creer class jeu
-    renommer Main en challenger qui etend jeu
-    creer class defenseur qui etend jeu
-    creer class duel qui etend jeu
+    creer class Joueur
+    creer class JoueurHumain qui etend Joueur
+    creer class JoueurIA qui etend Joueur
+
+Joueur
+    genererCombinaison
+    genererReponse
+
+Combinaison
+    afficherModele
+    comparer
+    afficherResultat
+
+
+
 
 	
 	
