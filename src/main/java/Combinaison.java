@@ -1,9 +1,4 @@
-import java.util.Scanner;
-
 public class Combinaison {
-
-    private Scanner sc = new Scanner(System.in);
-
 
     /**
      * affiche la Combinaison masquée
@@ -46,38 +41,6 @@ public class Combinaison {
     }
 
     /**
-     * Demande a l'attaquant de saisir une Combinaison que le defenseur devra trouver
-     * @param nbr nombre de coup(s) pour trouver sa Combinaison
-     * @return la Combinaison saisie
-     *
-     *  - UTILISEE DANS LA PREMIERE VERSION -
-     */
-    public String demanderAttaquant(int nbr) {
-        System.out.println("Veuillez saisir une Combinaison de 4 chiffres que le joueur défenseur devra trouver en moins de " +nbr+ " coups.");
-        System.out.println("C'est à vous : ");
-        String strA = sc.nextLine();
-        return strA;
-    }
-
-    /**
-     * Demande au defenseur de saisir une Combinaison et lui annonce combien il lui reste de coup(s)
-     * @param coupRestant nombre de coup(s) restant
-     * @param coupMax nombre de coup(s) alloués au début du jeu
-     * @param nombreChiffre nombre de chiffre qui compose la Combinaison
-     * @return la Combinaison saisie
-     */
-    public String demanderDefenseur(int coupRestant, int coupMax, int nombreChiffre) {
-        if (coupRestant == coupMax)
-            System.out.println("Vous devez trouver la Combinaison du joueur attaquant en moins de " +coupRestant+ " coup(s)");
-        else
-            System.out.println("Il vous reste " + coupRestant + " coup(s)");
-
-        System.out.println("Veuillez saisir une Combinaison de " +nombreChiffre+ " chiffres :");
-        String strD = sc.nextLine();
-        return strD;
-    }
-
-    /**
      * Comapare la Combinaison entrée par le defenseur avec celle de l'attaquant
      * fait un model de cette Combinaison en remplacant les chiffre :
      * + si le chiffre est plus grand que l'original
@@ -85,17 +48,17 @@ public class Combinaison {
      * = si le chiffre est le bon
      * @param combinaison Combinaison à prendre en modèle
      * @param reponse Combinaison à comparer au modéle
-     * @param level nombre de case de la Combinaison
      * @return modéle sous forme de +=+-
      */
-    public String comparer (String combinaison, String reponse, int level){
+    public String comparer (String combinaison, String reponse){
 
+        int nombreChiffre = reponse.length();
         String modele = "";
         char[] chiffreCombinaison = combinaison.toCharArray();
         char[] chiffreReponse = reponse.toCharArray();
 
         int i;
-        for (i=0; i<level; i++) {
+        for (i=0; i<nombreChiffre; i++) {
             if (chiffreCombinaison[i] < chiffreReponse[i])
                 modele += "-";
             else if (chiffreCombinaison[i] > chiffreReponse[i])
@@ -107,26 +70,6 @@ public class Combinaison {
         return modele;
     }
 
-    /**
-     * Crée une Combinaison aléatoire
-     * @param nombreDeCase nombre de case que comporte la Combinaison à générer
-     * @return la Combinaison générée
-     */
-    public String genererCombinaison (int nombreDeCase){
 
-        int combinaisonRandom[]= new int[nombreDeCase];
-        int min = 0, max = 9;
-        int i;
-        // choix aleatoire de chiffres pour chaques cases de la Combinaison à définir
-        for (i=0; i<nombreDeCase; i++) {
-            combinaisonRandom[i] = min + (int) (Math.random() * ((max - min) + 1));
-        }
-        // lecture de chaques valeurs de case et ajout à la chaine de caractére à renvoyer
-        String nombreAleatoire = "";
-        for (i=0; i<nombreDeCase; i++) {
-            nombreAleatoire += String.valueOf(combinaisonRandom[i]);
-        }
-        return nombreAleatoire;
-    }
 
 }

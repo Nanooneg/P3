@@ -9,6 +9,7 @@ public class JoueurHumain extends Joueur {
      * @param coupMax nombre de coup(s) max pour trouver la bonne réponse
      * @return la combinaison à trouver
      */
+    @Override
     public String genererCombinaison(int coupMax, int nombreChiffre) {
         System.out.println("Veuillez saisir une Combinaison de " +nombreChiffre+" chiffres que le joueur défenseur devra trouver en moins de " +coupMax+ " coups.");
         System.out.println("");
@@ -23,9 +24,9 @@ public class JoueurHumain extends Joueur {
      * @param nombreChiffre nombre de chiffre qui compose la Combinaison
      * @return la Combinaison saisie
      * */
-    public String genererReponse(int coupRestant, int coupMax, int nombreChiffre) {
+       public String genererReponse(int coupRestant, int coupMax, int nombreChiffre) {
         if (coupRestant == coupMax)
-            System.out.println("Vous devez trouver la Combinaison du joueur attaquant en moins de " +coupRestant+ " coup(s)");
+            System.out.println("Vous devez trouver la Combinaison du joueur attaquant en moins de " +coupMax+ " coup(s)");
         else
             System.out.println("Il vous reste " + coupRestant + " coup(s)");
 
@@ -33,4 +34,5 @@ public class JoueurHumain extends Joueur {
         String reponse = sc.nextLine();
         return reponse;
     }
+
 }
