@@ -12,6 +12,7 @@ public class Presentation {
         System.out.println("      A chaque coup, si vous n'avez pas trouveé la bonne réponse,     ");
         System.out.println("         L'ordinateur vous donne des indices dans un modèle :         ");
         System.out.println("");
+        System.out.println("             + veut dire que le chiffre est trop petit                ");
         System.out.println("             - veut dire que le chiffre est trop grand                ");
         System.out.println("                 = veut dire que le chiffre est bon                   ");
         System.out.println("                    C'est à vous !! bonne chance                      ");
