@@ -12,40 +12,69 @@ public class Main {
 
         //booleen pour rejouer
         boolean jouer = true;
+        int modeDeJeu = 0; // 1 - Challenger   2 - Défenseur   3 - Duel
         Scanner sc =new Scanner(System.in);
 
         //présentation du jeu
-        Presentation.presenter();
+        Presentation presentation = new Presentation();
+        presentation.presenter();
+        modeDeJeu = presentation.choixMode();
 
         do {
 
-            //déclaration variables et objets
-            Combinaison cbn = new Combinaison();
-            int coupRestant = chargement.getCoupMax();
+            //déclaration objets
+            Combinaison combinaison = new Combinaison();
+            JoueurHumain humain = new JoueurHumain();
+            JoueurIA IA = new JoueurIA();
+
+            //déclaration variables
+            int coupRestant = coupMax;
             int essai = 0;
-            String combinaisonA = cbn.genererCombinaison(caseCombinaison);
-            String combinaisonD = "";
-            String modele = "";
 
-            //boucle de déroulement du jeu : affichage du mogèle -> réponse du defenseur -> comparaison
-            while (!combinaisonA.equals(combinaisonD) && coupRestant != 0) {
-                cbn.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
-                combinaisonD = cbn.demanderDefenseur(coupRestant, coupMax, caseCombinaison);
-                modele = cbn.comparer(combinaisonA, combinaisonD, caseCombinaison);
-                coupRestant--;
-                essai++;
+
+            switch (modeDeJeu) {
+                case 1:
+                    String combinaisonA = IA.genererCombinaison(coupMax, caseCombinaison);
+                    String combinaisonD ="";
+                    String modele ="";
+                    //boucle de déroulement du jeu : affichage du mogèle -> réponse du defenseur -> comparaison
+                    while (!combinaisonA.equals(combinaisonD) && coupRestant != 0) {
+                        combinaison.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
+                        combinaisonD = humain.genererReponse(coupRestant, coupMax, caseCombinaison);
+                        modele = combinaison.comparer(combinaisonA, combinaisonD);
+                        coupRestant--;
+                        essai++;
+                    }
+                    // fin du jeu affichage de la solution
+                    combinaison.afficherResultat(combinaisonA, coupRestant, essai);
+
+
+                case 2:
+                    combinaisonA = humain.genererCombinaison(coupMax, caseCombinaison);
+                    combinaisonD ="";
+                    String combinaisonP ="";  // combinaison précédante
+                    modele ="";
+                    //boucle de déroulement du jeu : affichage du mogèle -> réponse du defenseur -> comparaison
+                    while (!combinaisonA.equals(combinaisonD) && coupRestant != 0) {
+                        combinaison.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
+                        combinaisonD = IA.genererReponse(coupRestant, coupMax, modele, combinaisonP, caseCombinaison);
+                        System.out.println(combinaisonD);
+                        combinaisonP = combinaisonD;
+                        modele = combinaison.comparer(combinaisonA, combinaisonD);
+                        coupRestant--;
+                        essai++;
+                    }
+                    // fin du jeu affichage de la solution
+                    combinaison.afficherResultat(combinaisonA, coupRestant, essai);
+                    break;
             }
-            // fin du jeu affichage de la solution
-            cbn.afficherResultat(combinaisonA, coupRestant, essai);
-
             //proposition de rejouer
             System.out.println("");
             System.out.println("Voulez-vous rejouer? oui/non");
             String demandeRejouer = sc.nextLine();
-                if (demandeRejouer.equals("non"))
-                    jouer = false;
+            if (demandeRejouer.equals("non"))
+                jouer = false;
             System.out.println("\n\n");
-
         }while (jouer);
 
         System.out.println("Merci et à bientôt");

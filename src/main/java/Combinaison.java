@@ -1,4 +1,4 @@
-public class Combinaison {
+class Combinaison {
 
     /**
      * affiche la Combinaison masquée
