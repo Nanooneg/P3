@@ -64,11 +64,8 @@ public class JoueurIA extends Joueur {
                         break;
                 }
             }
-            System.out.println(caractereModele[0]);
-            System.out.println(caractereModele[1]);
-            System.out.println(caractereModele[2]);
-            System.out.println(caractereModele[3]);
             System.out.println("Il me reste " +coupRestant+ " coup(s) : ");
+
         }
 
         return combinaison;

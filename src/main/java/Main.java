@@ -28,7 +28,7 @@ public class Main {
             JoueurIA IA = new JoueurIA();
 
             //déclaration variables
-            int coupRestant = coupMax;
+            int coupRestant = coupMax + 1;
             int essai = 0;
 
 
@@ -39,10 +39,10 @@ public class Main {
                     String modele ="";
                     //boucle de déroulement du jeu : affichage du mogèle -> réponse du defenseur -> comparaison
                     while (!combinaisonA.equals(combinaisonD) && coupRestant != 0) {
+                        coupRestant--;
                         combinaison.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
                         combinaisonD = humain.genererReponse(coupRestant, coupMax, caseCombinaison);
                         modele = combinaison.comparer(combinaisonA, combinaisonD);
-                        coupRestant--;
                         essai++;
                     }
                     // fin du jeu affichage de la solution
