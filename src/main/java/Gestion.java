@@ -9,19 +9,18 @@ public class Gestion {
      * affiche une présentation du jeu recherche +/-
      */
     public void presenter(){
-        System.out.print("\033[30m");
+        System.out.print("\033[30m");  //Police en Blanc
         System.out.println("");
         System.out.println("");
         System.out.println("             Bienvenur dans le jeu <<< Recherche +/- >>>              ");
         System.out.println("       Trouver la bonne Combinaison en un nombre maximal d'essai      ");
         System.out.println("");
-        System.out.println("      A chaque coup, si vous n'avez pas trouveé la bonne réponse,     ");
-        System.out.println("         L'ordinateur vous donne des indices dans un modèle :         ");
+        System.out.println("       A chaque coup, si la bonne réponse n'est pas découverte        ");
+        System.out.println("                Je donne des indices dans un modèle :                 ");
         System.out.println("");
         System.out.println("             + veut dire que le chiffre est trop petit                ");
         System.out.println("             - veut dire que le chiffre est trop grand                ");
         System.out.println("                 = veut dire que le chiffre est bon                   ");
-        System.out.println("                    C'est à vous !! bonne chance                      ");
         System.out.println("");
         System.out.println("");
     }
@@ -47,17 +46,47 @@ public class Gestion {
     }
 
     /**
+     * Comapare la Combinaison entrée par le defenseur avec celle de l'attaquant
+     * fait un model de cette Combinaison en remplacant les chiffre :
+     * + si le chiffre est plus grand que l'original
+     * - si le chiffre est plus petit que l'original
+     * = si le chiffre est le bon
+     * @param combinaison Combinaison à prendre en modèle
+     * @param reponse Combinaison à comparer au modéle
+     * @return modéle sous forme de +=+-
+     */
+    public String comparer (String combinaison, String reponse){
+
+        int nombreChiffre = reponse.length();
+        String modele = "";
+        char[] chiffreCombinaison = combinaison.toCharArray();
+        char[] chiffreReponse = reponse.toCharArray();
+
+        int i;
+        for (i=0; i<nombreChiffre; i++) {
+            if (chiffreCombinaison[i] < chiffreReponse[i])
+                modele += "-";
+            else if (chiffreCombinaison[i] > chiffreReponse[i])
+                modele += "+";
+            else if (chiffreCombinaison[i] == chiffreReponse[i])
+                modele += "=";
+        }
+
+        return modele;
+    }
+
+    /**
      * Propose à la fin d'une partie de : rejouer, changer de jeu ou sortir
      * @param modeDeJeu mode actuel / partie précédante
      * @return nouveau mode de jeu (4 étant la sortie du programme et 0 un reboot)
      */
     public int choixRejouer(int modeDeJeu){
         System.out.print("\033[30m");   //police en Blanc
-        System.out.println("\nVous pouvez : ");
+        System.out.println("\nMaintenant tu peux : ");
         System.out.println("1 - Rejouer au même jeu");
         System.out.println("2 - Retourner à l'écran de séléction");
         System.out.println("3 - Nous quitter ... :( ");
-        System.out.print("Que souhaitez-vous faire (1/2/3) : ");
+        System.out.print("Que souhaites-tu faire (1/2/3) : ");
         int demandeRejouer = sc.nextInt();
         switch (demandeRejouer){
             case 1:
@@ -72,5 +101,12 @@ public class Gestion {
                 break;
         }
         return modeDeJeu;
+    }
+
+    /**
+     * Message de fin
+     */
+    public void auRevoir(){
+        System.out.println("\nMerci et à bientôt");
     }
 }

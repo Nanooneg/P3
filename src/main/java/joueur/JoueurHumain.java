@@ -1,7 +1,5 @@
 package joueur;
 
-import joueur.Joueur;
-
 import java.util.Scanner;
 
 public class JoueurHumain extends Joueur {
@@ -15,7 +13,7 @@ public class JoueurHumain extends Joueur {
      */
     @Override
     public String genererCombinaison(int coupMax, int nombreChiffre) {
-        System.out.println("Veuillez saisir une Combinaison de " +nombreChiffre+" chiffres que le joueur défenseur devra trouver en moins de " +coupMax+ " coups.");
+        System.out.println("Choisi une Combinaison de " +nombreChiffre+" chiffres que je devrai trouver en moins de " +coupMax+ " coups.");
         String combinaison = sc.nextLine();
         System.out.println("");
         return combinaison;
@@ -30,11 +28,11 @@ public class JoueurHumain extends Joueur {
      * */
        public String genererReponse(int coupRestant, int coupMax, int nombreChiffre) {
         if (coupRestant == coupMax)
-            System.out.println("Vous devez trouver la Combinaison du joueur attaquant en moins de " +coupMax+ " coup(s)");
+            System.out.println("Tu dois trouver ma Combinaison en moins de " +coupMax+ " coup(s)");
         else
-            System.out.println("Il vous reste " + coupRestant + " coup(s)");
+            System.out.println("Il te reste " + coupRestant + " coup(s)");
 
-        System.out.println("Veuillez saisir une Combinaison de " +nombreChiffre+ " chiffres :");
+        System.out.println("Saisi une Combinaison de " +nombreChiffre+ " chiffres :");
         String reponse = sc.nextLine();
         System.out.println("");
         return reponse;

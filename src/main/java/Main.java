@@ -28,23 +28,21 @@ public class Main {
             if (modeDeJeu==0)
                 modeDeJeu = gestion.choixMode();
             switch (modeDeJeu) {
-                //***CHALLENGER***
                 case 1:
-                    mode.challenger(coupRestant,coupMax,essai,caseCombinaison,developpeur);
+                    mode.challenger(modeDeJeu,coupRestant,coupMax,essai,caseCombinaison,developpeur);
                     break;
-                //***DEFENSEUR***
                 case 2:
-                    mode.defenseur(coupRestant,coupMax,essai,caseCombinaison,developpeur);
+                    mode.defenseur(modeDeJeu,coupRestant,coupMax,essai,caseCombinaison,developpeur);
                     break;
-                //***DUEL***
                 case 3:
-                    mode.duel(coupRestant,coupMax,essai,caseCombinaison,developpeur);
+                    mode.duel(modeDeJeu,coupRestant,coupMax,essai,caseCombinaison,developpeur);
                     break;
             }
             //proposition de rejouer
             modeDeJeu = gestion.choixRejouer(modeDeJeu);
         }while (modeDeJeu != 4);
 
-        System.out.println("\nMerci et à bientôt");
+        gestion.auRevoir();
+
     }
 }

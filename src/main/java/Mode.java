@@ -4,11 +4,11 @@ import joueur.JoueurIA;
 public class Mode {
 
     //déclaration objets
-    private Combinaison combinaison = new Combinaison();
     private JoueurHumain humain = new JoueurHumain();
     private JoueurIA IA = new JoueurIA();
+    private Gestion gestion = new Gestion();
 
-    public void challenger(int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur){
+    public void challenger(int modeDeJeu, int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur){
         String combinaisonA = IA.genererCombinaison(coupMax, caseCombinaison);   //Combinaison Attaquant
         String combinaisonD ="";    //Combinaison Défenseur
         String modele ="";    //Modèle ("+-+=")
@@ -16,16 +16,19 @@ public class Mode {
         //boucle de déroulement du jeu : affichage du mogèle -> réponse du defenseur -> comparaison
         while (!combinaisonA.equals(combinaisonD) && coupRestant != 0) {
             coupRestant--;
-            combinaison.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
+            humain.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
             combinaisonD = humain.genererReponse(coupRestant, coupMax, caseCombinaison);
-            modele = combinaison.comparer(combinaisonA, combinaisonD);
+            modele = gestion.comparer(combinaisonA, combinaisonD);
             essai++;
         }
         // fin du jeu affichage de la solution
-        combinaison.afficherResultat(combinaisonA, coupRestant, essai);
+        if (combinaisonA.equals(combinaisonD))
+            System.out.println("Bravo tu as trouvé ma combinaison en " + essai + " coup(s) !!");
+        else
+            System.out.println("Dommage tu n'as pas trouvé ma combinaison ! la solution était : " + combinaisonA + "...");
     }
 
-    public void defenseur(int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur){
+    public void defenseur(int modeDeJeu, int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur){
         String combinaisonA = humain.genererCombinaison(coupMax, caseCombinaison);
         String combinaisonD ="";
         String combinaisonP ="";  // combinaison précédante
@@ -33,47 +36,61 @@ public class Mode {
         System.out.print("\033[33m");   //police en Jaune
         while (!combinaisonA.equals(combinaisonD) && coupRestant != 0) {
             coupRestant--;
-            combinaison.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
+            IA.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
             combinaisonD = IA.genererReponse(coupRestant, coupMax, modele, combinaisonP, caseCombinaison);
             System.out.println(combinaisonD);
             combinaisonP = combinaisonD;
-            modele = combinaison.comparer(combinaisonA, combinaisonD);
+            modele = gestion.comparer(combinaisonA, combinaisonD);
             essai++;
         }
-        combinaison.afficherResultat(combinaisonA, coupRestant, essai);
+        if (combinaisonA.equals(combinaisonD))
+            System.out.println("J'ai trouvé ta combinaison en " +essai+ " coup(s) !!");
+        else
+            System.out.println("Dommage, je n'ai pas réussi à trouver ta combinaison : " +combinaisonA+ "... ");
     }
 
-    public void duel(int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur){
+    public void duel(int modeDeJeu, int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur) {
         String combinaisonAHumain = IA.genererCombinaison(coupMax, caseCombinaison);
-        String combinaisonDHumain ="";
+        String combinaisonDHumain = "";
         String combinaisonAIA = humain.genererCombinaison(coupMax, caseCombinaison);
-        String combinaisonDIA ="";
-        String combinaisonPIA ="";
-        String modeleHumain ="";    //Modèle ("+-+=")
-        String modeleIA ="";
+        String combinaisonDIA = "";
+        String combinaisonPIA = "";
+        String modeleHumain = "";    //Modèle ("+-+=")
+        String modeleIA = "";
         //boucle de déroulement du jeu (1 tour humain puis 1 tour IA) : affichage du mogèle -> réponse du defenseur -> comparaison
-        while ((!combinaisonAHumain.equals(combinaisonDHumain) && coupRestant != 0)&&(!combinaisonAIA.equals(combinaisonDIA) && coupRestant != 0)){
+        while ((!combinaisonAHumain.equals(combinaisonDHumain) && coupRestant != 0) && (!combinaisonAIA.equals(combinaisonDIA) && coupRestant != 0)) {
             coupRestant--;
             //System.out.println("==========");
             //---Tour humain---
             System.out.print("\033[34m");   //police en Bleu
-            combinaison.afficherModele(modeleHumain, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonAHumain);
+            humain.afficherModele(modeleHumain, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonAHumain);
             combinaisonDHumain = humain.genererReponse(coupRestant, coupMax, caseCombinaison);
-            modeleHumain = combinaison.comparer(combinaisonAHumain, combinaisonDHumain);
+            modeleHumain = gestion.comparer(combinaisonAHumain, combinaisonDHumain);
             //System.out.println("----------");
             //---Tour IA---
             System.out.print("\033[33m");   //police en jaune
-            combinaison.afficherModele(modeleIA, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonAIA);
+            IA.afficherModele(modeleIA, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonAIA);
             combinaisonDIA = IA.genererReponse(coupRestant, coupMax, modeleIA, combinaisonPIA, caseCombinaison);
-            System.out.println(combinaisonDIA+ "\n");
+            System.out.println(combinaisonDIA + "\n");
             combinaisonPIA = combinaisonDIA;
-            modeleIA = combinaison.comparer(combinaisonAIA, combinaisonDIA);
-
+            modeleIA = gestion.comparer(combinaisonAIA, combinaisonDIA);
             essai++;
         }
         //System.out.println("==========");
         // fin du jeu affichage des solutions
-        combinaison.afficherResultat(combinaisonAHumain, coupRestant, essai);
-        combinaison.afficherResultat(combinaisonAIA, coupRestant, essai);
+        System.out.print("\033[30m");   //Police en Blanc
+        if (combinaisonAHumain.equals(combinaisonDHumain) && !combinaisonAIA.equals(combinaisonDIA) && coupRestant!=0){
+            System.out.println("Bravo! Tu as gagné. Tu as trouvé ma combinaison en " +essai+ " coup(s)");
+            System.out.println("et je n'ai pas trouvé la tienne...Ahhh c'était " +combinaisonAIA+ " !");
+        }else if (!combinaisonAHumain.equals(combinaisonDHumain) && combinaisonAIA.equals(combinaisonDIA) && coupRestant!=0){
+            System.out.println("Tu as perdu! j'ai trouvé ta combinaison en " +essai+ " coup(s)");
+            System.out.println("et tu n'as pas trouvé la mienne...C'était : " +combinaisonAHumain+ " !");
+        }else if (combinaisonAHumain.equals(combinaisonDHumain) && combinaisonAIA.equals(combinaisonDIA) && coupRestant!=0){
+            System.out.println("Ex-aequo !! Nous avons trouvé nos combinaisons respectives en " +essai+ " coup(s)");
+        }else {
+            System.out.println("Pas de perdant !! et pas de gagnant non-plus...");
+            System.out.println("Ma combinaison était : " +combinaisonAHumain+ "!");
+            System.out.println("Et la tienne était : " +combinaisonAIA+ " ...");
+        }
     }
 }
