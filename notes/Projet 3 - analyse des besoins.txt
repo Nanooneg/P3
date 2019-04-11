@@ -34,12 +34,12 @@ Combinaison
     comparer
     generer
 		
-Presentation
+Gestion
 	afficher()      afficher le but du jeu
 
 
 recherchePlusOuMoins
-	Presentation.afficher()
+	Gestion.afficher()
 	combinaisonAttaquant.demander() ou generer()
 	boucle :
 		combinaisonModele.afficher()
@@ -56,11 +56,11 @@ recherchePlusOuMoins
 A FAIRE
 
     creer class Main
-    creer class Joueur
-    creer class JoueurHumain qui etend Joueur
-    creer class JoueurIA qui etend Joueur
+    creer class joueur.Joueur
+    creer class joueur.JoueurHumain qui etend joueur.Joueur
+    creer class joueur.JoueurIA qui etend joueur.Joueur
 
-Joueur
+joueur.Joueur
     genererCombinaison
     genererReponse
 
