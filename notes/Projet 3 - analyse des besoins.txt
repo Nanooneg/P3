@@ -34,12 +34,12 @@ Combinaison
     comparer
     generer
 		
-Presentation
+Gestion
 	afficher()      afficher le but du jeu
 
 
 recherchePlusOuMoins
-	Presentation.afficher()
+	Gestion.afficher()
 	combinaisonAttaquant.demander() ou generer()
 	boucle :
 		combinaisonModele.afficher()

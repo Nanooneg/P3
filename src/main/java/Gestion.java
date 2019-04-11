@@ -1,6 +1,10 @@
+import java.util.Random;
 import java.util.Scanner;
 
-public class Presentation {
+public class Gestion {
+
+    Scanner sc = new Scanner(System.in);
+
     /**
      * affiche une présentation du jeu recherche +/-
      */
@@ -42,4 +46,31 @@ public class Presentation {
         return choix;
     }
 
+    /**
+     * Propose à la fin d'une partie de : rejouer, changer de jeu ou sortir
+     * @param modeDeJeu mode actuel / partie précédante
+     * @return nouveau mode de jeu (4 étant la sortie du programme et 0 un reboot)
+     */
+    public int choixRejouer(int modeDeJeu){
+        System.out.print("\033[30m");   //police en Blanc
+        System.out.println("\nVous pouvez : ");
+        System.out.println("1 - Rejouer au même jeu");
+        System.out.println("2 - Retourner à l'écran de séléction");
+        System.out.println("3 - Nous quitter ... :( ");
+        System.out.print("Que souhaitez-vous faire (1/2/3) : ");
+        int demandeRejouer = sc.nextInt();
+        switch (demandeRejouer){
+            case 1:
+                System.out.println("\n====================================\n");
+                break;
+            case 2:
+                modeDeJeu = 0;
+                System.out.println("\n====================================\n");
+                break;
+            case 3:
+                modeDeJeu = 4;
+                break;
+        }
+        return modeDeJeu;
+    }
 }
