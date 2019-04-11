@@ -23,10 +23,11 @@ public class Mode {
             essai++;
         }
         // fin du jeu affichage de la solution
+        System.out.print("\033[30m");   //Police en Blanc
         if (combinaisonA.equals(combinaisonD))
-            System.out.println("Bravo tu as trouvé ma combinaison en " + essai + " coup(s) !!");
+            System.out.println("\nGagné! Tu as trouvé ma combinaison en " + essai + " coup(s) !!");
         else
-            System.out.println("Dommage tu n'as pas trouvé ma combinaison ! C'était : " + combinaisonA + "...");
+            System.out.println("\nPerdu! Tu n'as pas trouvé ma combinaison ! C'était : " + combinaisonA + "...");
     }
 
     public void defenseur(int modeDeJeu, int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur){
@@ -44,10 +45,11 @@ public class Mode {
             coupRestant--;
             essai++;
         }
+        System.out.print("\033[30m");   //Police en Blanc
         if (combinaisonA.equals(combinaisonD))
-            System.out.println("J'ai trouvé ta combinaison en " +essai+ " coup(s) !!");
+            System.out.println("\nPerdu! J'ai trouvé ta combinaison en " +essai+ " coup(s) !!");
         else
-            System.out.println("Dommage, je n'ai pas réussi à trouver ta combinaison : " +combinaisonA+ "... ");
+            System.out.println("\nGagné! Je n'ai pas réussi à trouver ta combinaison : " +combinaisonA+ "... ");
     }
 
     public void duel(int modeDeJeu, int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur) {
@@ -85,10 +87,10 @@ public class Mode {
         System.out.println("====================================\n");
         // fin du jeu affichage des solutions
         if (combinaisonAHumain.equals(combinaisonDHumain) && !combinaisonAIA.equals(combinaisonDIA) && coupRestant!=0){
-            System.out.println("Bravo! Tu as gagné. Tu as trouvé ma combinaison en " +essai+ " coup(s)");
+            System.out.println("Gagné! Tu as trouvé ma combinaison en " +essai+ " coup(s)");
             System.out.println("et je n'ai pas trouvé la tienne...Ahhh c'était " +combinaisonAIA+ " !");
         }else if (!combinaisonAHumain.equals(combinaisonDHumain) && combinaisonAIA.equals(combinaisonDIA) && coupRestant!=0){
-            System.out.println("Tu as perdu! j'ai trouvé ta combinaison en " +essai+ " coup(s)");
+            System.out.println("Perdu! J'ai trouvé ta combinaison en " +essai+ " coup(s)");
             System.out.println("et tu n'as pas trouvé la mienne...C'était : " +combinaisonAHumain+ " !");
         }else if (combinaisonAHumain.equals(combinaisonDHumain) && combinaisonAIA.equals(combinaisonDIA) && coupRestant!=0){
             System.out.println("Ex-aequo !! Nous avons trouvé nos combinaisons respectives en " +essai+ " coup(s)");
