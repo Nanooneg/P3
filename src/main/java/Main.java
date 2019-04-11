@@ -21,7 +21,7 @@ public class Main {
         gestion.presenter();
 
         //déclaration variables
-        int coupRestant = coupMax + 1;
+        int coupRestant = coupMax;
         int essai = 0;
 
         do {

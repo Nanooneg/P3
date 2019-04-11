@@ -27,14 +27,16 @@ public class JoueurHumain extends Joueur {
      * @return la Combinaison saisie
      * */
        public String genererReponse(int coupRestant, int coupMax, int nombreChiffre) {
-        if (coupRestant == coupMax)
-            System.out.println("Tu dois trouver ma Combinaison en moins de " +coupMax+ " coup(s)");
-        else
+        if (coupRestant == coupMax) {
+            System.out.println("Tu dois trouver ma Combinaison de " +nombreChiffre+ " chiffre(s) en moins de " + coupMax + " coup(s)");
+        } else if (coupRestant == 1){
+            System.out.println("Dernier coup !!! Saisi une Combinaison de " + nombreChiffre + " chiffres :");
+        } else {
             System.out.println("Il te reste " + coupRestant + " coup(s)");
+            System.out.println("Saisi une Combinaison de " + nombreChiffre + " chiffres :");
+        }
 
-        System.out.println("Saisi une Combinaison de " +nombreChiffre+ " chiffres :");
         String reponse = sc.nextLine();
-        System.out.println("");
         return reponse;
     }
 

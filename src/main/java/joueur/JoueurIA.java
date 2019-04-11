@@ -47,7 +47,7 @@ public class JoueurIA extends Joueur {
         if (reponsePrecedante.equals(combinaison)){
             for (i=0; i<nombreChiffre; i++)
                 combinaison += "5";
-            System.out.println("J'ai" +coupMax+ " coup(s) pour trouver : ");
+            System.out.println("J'ai " +coupMax+ " coup(s) pour trouver : ");
         }else{
             for (i=0; i<nombreChiffre; i++){
                 switch (caractereModele[i]){
@@ -66,7 +66,10 @@ public class JoueurIA extends Joueur {
                         break;
                 }
             }
-            System.out.println("Il me reste " +coupRestant+ " coup(s) : ");
+            if (coupRestant == 1)
+                System.out.println("Dernier coup !!");
+            else
+                System.out.println("Il me reste " +coupRestant+ " coup(s) : ");
 
         }
 
