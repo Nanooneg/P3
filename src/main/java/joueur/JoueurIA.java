@@ -1,3 +1,7 @@
+package joueur;
+
+import joueur.Joueur;
+
 public class JoueurIA extends Joueur {
 
     /**
