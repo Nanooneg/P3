@@ -41,6 +41,7 @@ public class Gestion {
         System.out.println("3 - Duel -> Le mix des deux ! Vous jouez à tour de rôle avec L'IA");
         System.out.println("");
         System.out.print("Que choisissez-vous ? (1/2/3) : ");
+
         do {
             if (!saisieOk)
                 System.out.println("Erreur de saisie");
@@ -53,7 +54,8 @@ public class Gestion {
                 saisieOk = false;
             }
         }while (!saisieOk);
-        System.out.println("\n");
+
+        System.out.println("\n====================================\n");
 
         return choix;
     }
@@ -102,6 +104,7 @@ public class Gestion {
         System.out.println("2 - Retourner à l'écran de séléction");
         System.out.println("3 - Nous quitter ... :( ");
         System.out.print("Que souhaites-tu faire (1/2/3) : ");
+
         do {
             if (!saisieOk)
                 System.out.println("Erreur de saisie");
@@ -114,6 +117,7 @@ public class Gestion {
                 saisieOk = false;
             }
         }while (!saisieOk);
+
         switch (choix){
             case 1:
                 System.out.println("\n====================================\n");
