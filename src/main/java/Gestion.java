@@ -1,4 +1,6 @@
-import java.util.Random;
+import jdk.internal.util.xml.impl.Input;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Gestion {
@@ -31,7 +33,7 @@ public class Gestion {
      */
     public int choixMode(){
         int choix = 0;
-        Scanner sc = new Scanner(System.in);
+        boolean saisieOk = true;
 
         System.out.println("3 modes de jeu possibles : ");
         System.out.println("1 - Challenger -> Vous essayez de trouver la combinaison de L'IA");
@@ -39,7 +41,18 @@ public class Gestion {
         System.out.println("3 - Duel -> Le mix des deux ! Vous jouez à tour de rôle avec L'IA");
         System.out.println("");
         System.out.print("Que choisissez-vous ? (1/2/3) : ");
-        choix = sc.nextInt();
+        do {
+            if (!saisieOk)
+                System.out.println("Erreur de saisie");
+                System.out.print("Que choisissez-vous ? (1/2/3) : ");
+            try {
+                choix = sc.nextInt();
+                saisieOk = (choix >= 1 && choix <= 3);
+            } catch (InputMismatchException e) {
+                sc.next();
+                saisieOk = false;
+            }
+        }while (!saisieOk);
         System.out.println("\n");
 
         return choix;
@@ -82,13 +95,26 @@ public class Gestion {
      */
     public int choixRejouer(int modeDeJeu){
         System.out.print("\033[30m");   //police en Blanc
+        int choix = 0;
+        boolean saisieOk = true;
         System.out.println("\nMaintenant tu peux : ");
         System.out.println("1 - Rejouer au même jeu");
         System.out.println("2 - Retourner à l'écran de séléction");
         System.out.println("3 - Nous quitter ... :( ");
         System.out.print("Que souhaites-tu faire (1/2/3) : ");
-        int demandeRejouer = sc.nextInt();
-        switch (demandeRejouer){
+        do {
+            if (!saisieOk)
+                System.out.println("Erreur de saisie");
+            System.out.print("Que choisissez-vous ? (1/2/3) : ");
+            try {
+                choix = sc.nextInt();
+                saisieOk = (choix >= 1 && choix <= 3);
+            } catch (InputMismatchException e) {
+                sc.next();
+                saisieOk = false;
+            }
+        }while (!saisieOk);
+        switch (choix){
             case 1:
                 System.out.println("\n====================================\n");
                 break;

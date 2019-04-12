@@ -9,9 +9,9 @@ public class Main {
 
         //récupération des paramétres chargés
         Chargement chargement = new Chargement();
-        int caseCombinaison = chargement.getCaseCombinaison();
-        int coupMax = chargement.getCoupMax();
-        boolean developpeur = chargement.isDeveloppeur();
+        int CASE_COMBINAISON = chargement.getCaseCombinaison();
+        int COUP_MAX = chargement.getCoupMax();
+        boolean DEVELOPPEUR = chargement.isDeveloppeur();
 
         //mode de jeu
         int modeDeJeu = 0; // 1 - Challenger   2 - Défenseur   3 - Duel  (4 - sortie du programme, seulement proposé au moment de rejouer)
@@ -21,7 +21,7 @@ public class Main {
         gestion.presenter();
 
         //déclaration variables
-        int coupRestant = coupMax;
+        int coupRestant = COUP_MAX;
         int essai = 0;
 
         do {
@@ -29,13 +29,13 @@ public class Main {
                 modeDeJeu = gestion.choixMode();
             switch (modeDeJeu) {
                 case 1:
-                    mode.challenger(modeDeJeu,coupRestant,coupMax,essai,caseCombinaison,developpeur);
+                    mode.challenger(modeDeJeu,coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
                     break;
                 case 2:
-                    mode.defenseur(modeDeJeu,coupRestant,coupMax,essai,caseCombinaison,developpeur);
+                    mode.defenseur(modeDeJeu,coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
                     break;
                 case 3:
-                    mode.duel(modeDeJeu,coupRestant,coupMax,essai,caseCombinaison,developpeur);
+                    mode.duel(modeDeJeu,coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
                     break;
             }
             //proposition de rejouer

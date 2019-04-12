@@ -42,24 +42,44 @@ public class JoueurIA extends Joueur {
             chiffreReponseP[i]=Character.digit(reponsePrecedante.charAt(i),10);
         }
 
-        int i, min, max;
-
+        int i,  min, max, minP=0, maxP=0;
+        //
         if (reponsePrecedante.equals(combinaison)){
             for (i=0; i<nombreChiffre; i++)
                 combinaison += "5";
             System.out.println("J'ai " +coupMax+ " coup(s) pour trouver : ");
-        }else{
+        } else {
             for (i=0; i<nombreChiffre; i++){
                 switch (caractereModele[i]){
                     case '+' :
-                        min = chiffreReponseP[i];
-                        max = 9;
-                        combinaison += String.valueOf(min + (int) (Math.random() * ((max - min) + 1)));
+                        if (chiffreReponseP[i]==5) {
+                            min = chiffreReponseP[i];
+                            max = 9;
+                            combinaison += String.valueOf(min + (int) (Math.random() * ((max - min) + 1)));
+                            minP = min;
+                            maxP = max;
+                        } else {
+                            min = chiffreReponseP[i];
+                            max = maxP;
+                            combinaison += String.valueOf(min + (int) (Math.random() * ((max - min) + 1)));
+                            minP = min;
+                            maxP = max;
+                        }
                         break;
                     case '-' :
-                        min = 0;
-                        max = chiffreReponseP[i];
-                        combinaison += String.valueOf(min + (int) (Math.random() * ((max - min) + 1)));
+                        if (chiffreReponseP[i]==5) {
+                            min = 0;
+                            max = chiffreReponseP[i];
+                            combinaison += String.valueOf(min + (int) (Math.random() * ((max - min) + 1)));
+                            minP = min;
+                            maxP = max;
+                        } else {
+                            min = minP;
+                            max = chiffreReponseP[i];
+                            combinaison += String.valueOf(min + (int) (Math.random() * ((max - min) + 1)));
+                            minP = min;
+                            maxP = max;
+                        }
                         break;
                     case '=' :
                         combinaison += chiffreReponseP[i];
