@@ -1,5 +1,8 @@
+import joueur.Historique;
 import joueur.JoueurHumain;
 import joueur.JoueurIA;
+
+import java.util.Map;
 
 public class Mode {
 
@@ -7,8 +10,9 @@ public class Mode {
     private JoueurHumain humain = new JoueurHumain();
     private JoueurIA IA = new JoueurIA();
     private Gestion gestion = new Gestion();
+    private Historique historique = new Historique();
 
-    public void challenger(int modeDeJeu, int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur){
+    public void challenger(int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur){
         String combinaisonA = IA.genererCombinaison(coupMax, caseCombinaison);   //Combinaison Attaquant
         String combinaisonD ="";                                                 //Combinaison Défenseur
         String modele ="";                                                       //Modèle ("+-+=")
@@ -30,15 +34,17 @@ public class Mode {
             System.out.println("\nPerdu! Tu n'as pas trouvé ma combinaison ! C'était : " + combinaisonA + "...");
     }
 
-    public void defenseur(int modeDeJeu, int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur){
+    public void defenseur(int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur){
         String combinaisonA = humain.genererCombinaison(coupMax, caseCombinaison);
         String combinaisonD ="";
         String combinaisonP ="";                                                 // combinaison précédante
         String modele ="";
+        Map<Integer,String> memoire = historique.initialiser(caseCombinaison);
         System.out.print("\033[33m");    //police en Jaune
         while (!combinaisonA.equals(combinaisonD) && coupRestant != 0) {
             IA.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
-            combinaisonD = IA.genererReponse(coupRestant, coupMax, modele, combinaisonP, caseCombinaison);
+            memoire = IA.genererReponse(coupRestant, coupMax, modele, combinaisonP, caseCombinaison, memoire);
+            combinaisonD = IA.lireReponse(memoire);
             System.out.println(combinaisonD);
             combinaisonP = combinaisonD;
             modele = gestion.comparer(combinaisonA, combinaisonD);
@@ -52,7 +58,7 @@ public class Mode {
             System.out.println("\nGagné! Je n'ai pas réussi à trouver ta combinaison : " +combinaisonA+ "... ");
     }
 
-    public void duel(int modeDeJeu, int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur) {
+    public void duel(int coupRestant, int coupMax, int essai, int caseCombinaison, boolean developpeur) {
         String combinaisonAHumain = IA.genererCombinaison(coupMax, caseCombinaison);
         String combinaisonDHumain = "";
         String combinaisonAIA = humain.genererCombinaison(coupMax, caseCombinaison);
@@ -60,6 +66,7 @@ public class Mode {
         String combinaisonPIA = "";
         String modeleHumain = "";
         String modeleIA = "";
+        Map<Integer,String> memoire = historique.initialiser(caseCombinaison);
         //boucle de déroulement du jeu (1 tour humain puis 1 tour IA) : affichage du mogèle -> réponse du defenseur -> comparaison
         while ((!combinaisonAHumain.equals(combinaisonDHumain) && coupRestant != 0) && (!combinaisonAIA.equals(combinaisonDIA) && coupRestant != 0)) {
             System.out.print("\033[30m");   //Police en Blanc
@@ -75,7 +82,8 @@ public class Mode {
             //---Tour IA---
             System.out.print("\033[33m");   //police en jaune
             IA.afficherModele(modeleIA, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonAIA);
-            combinaisonDIA = IA.genererReponse(coupRestant, coupMax, modeleIA, combinaisonPIA, caseCombinaison);
+            memoire = IA.genererReponse(coupRestant, coupMax, modeleIA, combinaisonPIA, caseCombinaison,memoire);
+            combinaisonDIA = IA.lireReponse(memoire);
             System.out.println(combinaisonDIA);
             combinaisonPIA = combinaisonDIA;
             modeleIA = gestion.comparer(combinaisonAIA, combinaisonDIA);

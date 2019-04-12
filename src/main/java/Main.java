@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -15,7 +13,6 @@ public class Main {
 
         //mode de jeu
         int modeDeJeu = 0; // 1 - Challenger   2 - Défenseur   3 - Duel  (4 - sortie du programme, seulement proposé au moment de rejouer)
-        Scanner sc =new Scanner(System.in);
 
         //présentation du jeu
         gestion.presenter();
@@ -29,13 +26,13 @@ public class Main {
                 modeDeJeu = gestion.choixMode();
             switch (modeDeJeu) {
                 case 1:
-                    mode.challenger(modeDeJeu,coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
+                    mode.challenger(coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
                     break;
                 case 2:
-                    mode.defenseur(modeDeJeu,coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
+                    mode.defenseur(coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
                     break;
                 case 3:
-                    mode.duel(modeDeJeu,coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
+                    mode.duel(coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
                     break;
             }
             //proposition de rejouer
