@@ -17,22 +17,18 @@ public class Main {
         //présentation du jeu
         gestion.presenter();
 
-        //déclaration variables
-        int coupRestant = COUP_MAX;
-        int essai = 0;
-
         do {
             if (modeDeJeu==0)
                 modeDeJeu = gestion.choixMode();
             switch (modeDeJeu) {
                 case 1:
-                    mode.challenger(coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
+                    mode.challenger(COUP_MAX,CASE_COMBINAISON,DEVELOPPEUR);
                     break;
                 case 2:
-                    mode.defenseur(coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
+                    mode.defenseur(COUP_MAX,CASE_COMBINAISON,DEVELOPPEUR);
                     break;
                 case 3:
-                    mode.duel(coupRestant,COUP_MAX,essai,CASE_COMBINAISON,DEVELOPPEUR);
+                    mode.duel(COUP_MAX,CASE_COMBINAISON,DEVELOPPEUR);
                     break;
             }
             //proposition de rejouer

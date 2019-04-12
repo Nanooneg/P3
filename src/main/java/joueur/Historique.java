@@ -44,4 +44,23 @@ public class Historique {
             nouveau = false;
         return nouveau;
     }
+
+    /**
+     * Lis l'historique et extrait la dernière réponse générée :
+     * - 1er caractére des valeurs trouvés à la clé i
+     * - 1er caractère des valeurs trouvés à toutes les clés
+     * @return réponse
+     */
+    public String lireReponse (Map<Integer,String> memoire, int cle){
+        String reponse ="";
+        int i;
+        if (cle == memoire.size()) {
+            for (i = 0; i < cle; i++) {
+                reponse += memoire.get(i).substring(0,1);
+            }
+        }else{
+            reponse = memoire.get(cle).substring(0,1);
+        }
+        return reponse;
+    }
 }

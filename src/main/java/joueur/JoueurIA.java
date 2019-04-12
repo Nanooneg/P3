@@ -34,32 +34,25 @@ public class JoueurIA extends Joueur {
      * @param coupRestant nombre de coup(s) restant
      * @param coupMax nombre de coup(s) alloués au début du jeu
      * @param modele modèle sous la forme "+-+=" retourné aprés la comparaison de la réponse précédante
-     * @param reponsePrecedante réponse générée au tour précédant
-     * @param nombreChiffre nombre de chiffre qui composent la réponse à générer
      * @param memoire historique des reponses précédantes
      * @return l'historique mis à jour
      */
-    public Map<Integer,String> genererReponse(int coupRestant, int coupMax, String modele, String reponsePrecedante, int nombreChiffre, Map<Integer,String> memoire) {
-        String temp ="";
+    public Map<Integer,String> genererReponse(int coupRestant, int coupMax, String modele, Map<Integer,String> memoire) {
+        String temp;
         char[] caractereModele = modele.toCharArray();
-        int[] chiffreReponseP = new int[reponsePrecedante.length()];
-
-        for (int i=0; i<reponsePrecedante.length(); i++)
-        {
-            chiffreReponseP[i]=Character.digit(reponsePrecedante.charAt(i),10);
-        }
 
         int i, min, max;
-        if (reponsePrecedante.equals(temp)){
-            for (i=0; i<nombreChiffre; i++) {
+        if (memoire.get(0).isEmpty()){
+            for (i=0; i<memoire.size(); i++) {
                 historique.ajouter(memoire,i,"5");
             }
             System.out.println("J'ai " +coupMax+ " coup(s) pour trouver : ");
         } else {
-            for (i=0; i<nombreChiffre; i++){
+            for (i=0; i<memoire.size(); i++){
                 switch (caractereModele[i]){
                     case '+' :
-                        min = chiffreReponseP[i];
+                        //récupère le dernier chiffre généré dans la réponse précédante
+                        min = Integer.valueOf(historique.lireReponse(memoire,i));
                         max = 9;
                         do {
                             temp = String.valueOf(min + (int) (Math.random() * ((max - min) + 1)));
@@ -68,7 +61,7 @@ public class JoueurIA extends Joueur {
                         break;
                     case '-' :
                         min = 0;
-                        max = chiffreReponseP[i];
+                        max = Integer.valueOf(historique.lireReponse(memoire,i));
                         do {
                             temp = String.valueOf(min + (int) (Math.random() * ((max - min) + 1)));
                         }while (!historique.parcourir(memoire,i,temp));
@@ -84,16 +77,5 @@ public class JoueurIA extends Joueur {
         return memoire;
     }
 
-    /**
-     * Lis l'historique et extrait la dernière réponse générée (1er caractére des valeurs trouvés à chaque clé)
-     * @return réponse
-     */
-    public String lireReponse (Map<Integer,String> memoire){
-        String reponse ="";
-        int i;
-        for (i=0; i<memoire.size() ; i++){
-            reponse += memoire.get(i).substring(0,1);
-        }
-        return reponse;
-    }
+
 }

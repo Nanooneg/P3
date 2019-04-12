@@ -53,7 +53,7 @@ public class Gestion {
             }
         }while (!saisieOk);
 
-        System.out.println("\n====================================\n");
+        this.decor("double",true,true);
 
         return choix;
     }
@@ -118,17 +118,64 @@ public class Gestion {
 
         switch (choix){
             case 1:
-                System.out.println("\n====================================\n");
+                this.decor("double",true,true);
                 break;
             case 2:
                 modeDeJeu = 0;
-                System.out.println("\n====================================\n");
+                this.decor("double",true,true);
                 break;
             case 3:
                 modeDeJeu = 4;
                 break;
         }
         return modeDeJeu;
+    }
+
+    /**
+     * Change la couleur de la police de la console en fonction du cas
+     * - bleu : joueur humain joue
+     * - jaune : IA joue
+     * - blanc : menu
+     * @param cas cas sités au-dessus
+     */
+    public void couleurPolice (int cas){
+        switch (cas){
+            case 1:
+                System.out.print("\033[34m");   //bleu
+                break;
+            case 2:
+                System.out.print("\033[33m");   //jaune
+                break;
+            case 3:
+                System.out.print("\033[30m");   //blanc
+                break;
+        }
+    }
+
+    /**
+     * dispose des éléments de décor au cours du déroulement du jeu
+     * Purement esthétique !!!
+     * @param cas simple ou double ligne
+     * @param retourAvant sauter une ligne avant
+     * @param retourApres sauter une ligne après
+     */
+    public void decor (String cas, boolean retourAvant, boolean retourApres) {
+        switch (cas) {
+            case "double":
+                if (retourAvant)
+                    System.out.println("\n");
+                System.out.println("====================================");
+                if (retourApres)
+                    System.out.println("\n");
+                break;
+            case "simple":
+                if (retourAvant)
+                    System.out.println("\n");
+                System.out.println("------------------------------------");
+                if (retourApres)
+                    System.out.println("\n");
+                break;
+        }
     }
 
     /**
