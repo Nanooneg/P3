@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class JoueurHumain extends Joueur {
 
     Scanner sc = new Scanner(System.in);
+    Gestion gestion = new Gestion();
 
     /**
      * Demande à l'attaquant humain de saisir un combinaison que le défenseur IA devra trouver en X coup(s)
@@ -17,8 +18,6 @@ public class JoueurHumain extends Joueur {
         String combinaison ="";
         System.out.println("Choisi une Combinaison de " +nombreChiffre+" chiffres que je devrai trouver en moins de " +coupMax+ " coups.");
         do {
-            if (!saisieOk)
-                System.out.println("Erreur de saisie!");
             try {
                 temp = sc.nextInt();
                 combinaison = String.valueOf(temp);
@@ -26,6 +25,12 @@ public class JoueurHumain extends Joueur {
             } catch (InputMismatchException e) {
                 sc.next();
                 saisieOk = false;
+            }
+            if (!saisieOk) {
+                gestion.couleurPolice(4);
+                System.out.println("Erreur de saisie!");
+                gestion.couleurPolice(3);
+                System.out.println("Choisi une Combinaison de " +nombreChiffre+" chiffres que je devrai trouver en moins de " +coupMax+ " coups.");
             }
         }while (!saisieOk);
         System.out.println("");

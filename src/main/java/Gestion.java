@@ -41,15 +41,18 @@ public class Gestion {
         System.out.print("Que souhaites-tu faire (1/2/3) : ");
 
         do {
-            if (!saisieOk)
-                System.out.println("Erreur de saisie");
-                System.out.print("Que souhaites-tu faire (1/2/3) : ");
             try {
                 choix = sc.nextInt();
                 saisieOk = (choix >= 1 && choix <= 3);
             } catch (InputMismatchException e) {
                 sc.next();
                 saisieOk = false;
+            }
+            if (!saisieOk) {
+                this.couleurPolice(4);
+                System.out.println("Erreur de saisie");
+                this.couleurPolice(3);
+                System.out.print("Que souhaites-tu faire (1/2/3) : ");
             }
         }while (!saisieOk);
 
@@ -105,15 +108,18 @@ public class Gestion {
         System.out.print("Que souhaites-tu faire (1/2/3) : ");
 
         do {
-            if (!saisieOk)
-                System.out.println("Erreur de saisie");
-            System.out.print("Que souhaites-tu faire (1/2/3) : ");
             try {
                 choix = sc.nextInt();
                 saisieOk = (choix >= 1 && choix <= 3);
             } catch (InputMismatchException e) {
                 sc.next();
                 saisieOk = false;
+            }
+            if (!saisieOk) {
+                this.couleurPolice(4);
+                System.out.println("Erreur de saisie");
+                this.couleurPolice(3);
+                System.out.print("Que souhaites-tu faire (1/2/3) : ");
             }
         }while (!saisieOk);
 
@@ -150,6 +156,8 @@ public class Gestion {
             case 3:
                 System.out.print("\033[30m");   //blanc
                 break;
+            case 4:
+                System.out.print("\033[31m");   //rouge
         }
     }
 
