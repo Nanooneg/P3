@@ -1,7 +1,3 @@
-import joueur.Historique;
-import joueur.JoueurHumain;
-import joueur.JoueurIA;
-
 import java.util.Map;
 
 public class Mode {

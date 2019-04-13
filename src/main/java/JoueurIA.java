@@ -1,6 +1,3 @@
-package joueur;
-
-import java.awt.event.HierarchyBoundsAdapter;
 import java.util.Map;
 
 public class JoueurIA extends Joueur {

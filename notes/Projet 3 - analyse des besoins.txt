@@ -56,11 +56,11 @@ recherchePlusOuMoins
 A FAIRE
 
     creer class Main
-    creer class joueur.Joueur
-    creer class joueur.JoueurHumain qui etend joueur.Joueur
-    creer class joueur.JoueurIA qui etend joueur.Joueur
+    creer class Joueur
+    creer class JoueurHumain qui etend Joueur
+    creer class JoueurIA qui etend Joueur
 
-joueur.Joueur
+Joueur
     genererCombinaison
     genererReponse
 

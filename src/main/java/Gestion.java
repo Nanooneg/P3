@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class Gestion {
 
-    Scanner sc = new Scanner(System.in);
+     private Scanner sc = new Scanner(System.in);
 
     /**
      * affiche une présentation du jeu recherche +/-
      */
     public void presenter(){
-        System.out.print("\033[30m");  //Police en Blanc
+        this.couleurPolice(3);
         System.out.println("");
         System.out.println("");
         System.out.println("             Bienvenur dans le jeu <<< Recherche +/- >>>              ");
@@ -38,12 +38,12 @@ public class Gestion {
         System.out.println("2 - Défenseur -> L'IA essai de découvrir votre combinaison");
         System.out.println("3 - Duel -> Le mix des deux ! Vous jouez à tour de rôle avec L'IA");
         System.out.println("");
-        System.out.print("Que choisissez-vous ? (1/2/3) : ");
+        System.out.print("Que souhaites-tu faire (1/2/3) : ");
 
         do {
             if (!saisieOk)
                 System.out.println("Erreur de saisie");
-                System.out.print("Que choisissez-vous ? (1/2/3) : ");
+                System.out.print("Que souhaites-tu faire (1/2/3) : ");
             try {
                 choix = sc.nextInt();
                 saisieOk = (choix >= 1 && choix <= 3);
@@ -97,6 +97,7 @@ public class Gestion {
         System.out.print("\033[30m");   //police en Blanc
         int choix = 0;
         boolean saisieOk = true;
+
         System.out.println("\nMaintenant tu peux : ");
         System.out.println("1 - Rejouer au même jeu");
         System.out.println("2 - Retourner à l'écran de séléction");
@@ -106,7 +107,7 @@ public class Gestion {
         do {
             if (!saisieOk)
                 System.out.println("Erreur de saisie");
-            System.out.print("Que choisissez-vous ? (1/2/3) : ");
+            System.out.print("Que souhaites-tu faire (1/2/3) : ");
             try {
                 choix = sc.nextInt();
                 saisieOk = (choix >= 1 && choix <= 3);
