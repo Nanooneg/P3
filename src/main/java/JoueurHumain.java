@@ -1,7 +1,12 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class JoueurHumain extends Joueur {
+
+    static final Logger logger = LogManager.getLogger(JoueurHumain.class);
 
     Scanner sc = new Scanner(System.in);
     Gestion gestion = new Gestion();
@@ -13,6 +18,8 @@ public class JoueurHumain extends Joueur {
      */
     @Override
     public String genererCombinaison(int coupMax, int nombreChiffre) {
+        logger.trace("début de demande à l'utilisateur de donner une combinaison");
+
         boolean saisieOk = true;
         int temp;
         String combinaison ="";
@@ -20,10 +27,12 @@ public class JoueurHumain extends Joueur {
         do {
             try {
                 temp = sc.nextInt();
+                logger.debug("Saisie utilisateur : " +temp);
                 combinaison = String.valueOf(temp);
                 saisieOk = (combinaison.length() == nombreChiffre);
             } catch (InputMismatchException e) {
                 sc.next();
+                logger.error("Erreur de saisie !!");
                 saisieOk = false;
             }
             if (!saisieOk) {
@@ -34,6 +43,9 @@ public class JoueurHumain extends Joueur {
             }
         }while (!saisieOk);
         System.out.println("");
+
+        logger.trace("fin de demande à l'utilisateur de donner une combinaison");
+        logger.debug("réponse renvoyé : " +combinaison);
         return combinaison;
     }
 
@@ -45,6 +57,7 @@ public class JoueurHumain extends Joueur {
      * @return la Combinaison saisie
      * */
     public String genererReponse(int coupRestant, int coupMax, int nombreChiffre) {
+        logger.trace("début de demande à l'utilisateur de donner une réponse");
         boolean saisieOk = true;
         int temp = 0;
         String reponse ="";
@@ -62,13 +75,17 @@ public class JoueurHumain extends Joueur {
                 System.out.println("Erreur de saisie!");
             try {
                 temp = sc.nextInt();
+                logger.debug("Saisie utilisateur : " +temp);
                 reponse = String.valueOf(temp);
                 saisieOk = (reponse.length() == nombreChiffre);
             } catch (InputMismatchException e) {
                 sc.next();
+                logger.error("Erreur de saisie !!");
                 saisieOk = false;
             }
         }while (!saisieOk);
+        logger.trace("fin de demande à l'utilisateur de donner une réponse");
+        logger.debug("réponse renvoyé : " +reponse);
         return reponse;
     }
 

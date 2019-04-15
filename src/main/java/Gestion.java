@@ -1,14 +1,21 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Gestion {
 
-     private Scanner sc = new Scanner(System.in);
+    static final Logger logger = LogManager.getLogger(Gestion.class);
+
+    private Scanner sc = new Scanner(System.in);
 
     /**
      * affiche une présentation du jeu recherche +/-
      */
     public void presenter(){
+        logger.trace("affichage de la présentation du jeu");
+
         this.couleurPolice(3);
         System.out.println("");
         System.out.println("");
@@ -23,6 +30,7 @@ public class Gestion {
         System.out.println("                 = veut dire que le chiffre est bon                   ");
         System.out.println("");
         System.out.println("");
+
     }
 
     /**
@@ -30,6 +38,8 @@ public class Gestion {
      * @return le choix du mode de jeu
      */
     public int choixMode(){
+        logger.trace("ouverture menu des choix \"modes\"");
+
         int choix = 0;
         boolean saisieOk = true;
 
@@ -43,9 +53,11 @@ public class Gestion {
         do {
             try {
                 choix = sc.nextInt();
+                logger.debug("Saisie utilisateur : " +choix);
                 saisieOk = (choix >= 1 && choix <= 3);
             } catch (InputMismatchException e) {
                 sc.next();
+                logger.error("Erreur de saisie !!");
                 saisieOk = false;
             }
             if (!saisieOk) {
@@ -58,6 +70,8 @@ public class Gestion {
 
         this.decor("double",true,true);
 
+        logger.trace("fermture du menu des choix \"modes\"");
+        logger.debug("choix renvoyé : " +choix);
         return choix;
     }
 
@@ -72,6 +86,7 @@ public class Gestion {
      * @return modéle sous forme de +=+-
      */
     public String comparer (String combinaison, String reponse){
+        logger.trace("début comparaison des combinaisons");
 
         int nombreChiffre = reponse.length();
         String modele = "";
@@ -88,6 +103,8 @@ public class Gestion {
                 modele += "=";
         }
 
+        logger.trace("fin comparaison des combinaisons");
+        logger.debug("modèle renvoyé : " +modele);
         return modele;
     }
 
@@ -97,6 +114,7 @@ public class Gestion {
      * @return nouveau mode de jeu (4 étant la sortie du programme et 0 un reboot)
      */
     public int choixRejouer(int modeDeJeu){
+        logger.trace("ouverture menu des choix \"rejouer\"");
         System.out.print("\033[30m");   //police en Blanc
         int choix = 0;
         boolean saisieOk = true;
@@ -110,9 +128,11 @@ public class Gestion {
         do {
             try {
                 choix = sc.nextInt();
+                logger.debug("Saisie utilisateur : " +choix);
                 saisieOk = (choix >= 1 && choix <= 3);
             } catch (InputMismatchException e) {
                 sc.next();
+                logger.error("Erreur de saisie !!");
                 saisieOk = false;
             }
             if (!saisieOk) {
@@ -135,6 +155,9 @@ public class Gestion {
                 modeDeJeu = 4;
                 break;
         }
+
+        logger.trace("fermeture du menu des choix \"rejouer\"");
+        logger.debug("choix renvoyé : " +choix);
         return modeDeJeu;
     }
 
@@ -146,6 +169,7 @@ public class Gestion {
      * @param cas cas sités au-dessus
      */
     public void couleurPolice (int cas){
+
         switch (cas){
             case 1:
                 System.out.print("\033[34m");   //bleu
@@ -169,6 +193,7 @@ public class Gestion {
      * @param retourApres sauter une ligne après
      */
     public void decor (String cas, boolean retourAvant, boolean retourApres) {
+
         switch (cas) {
             case "double":
                 if (retourAvant)
@@ -191,6 +216,8 @@ public class Gestion {
      * Message de fin
      */
     public void auRevoir(){
+        logger.trace("affichage message d'au revoir");
+
         System.out.println("\nMerci et à bientôt");
     }
 }

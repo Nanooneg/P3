@@ -1,4 +1,9 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public abstract class Joueur {
+
+    static final Logger logger = LogManager.getLogger(Joueur.class);
 
     public abstract String genererCombinaison(int coupMax, int nombreChiffre);
 
@@ -13,6 +18,8 @@ public abstract class Joueur {
      * @param combinaison Combinaison à trouver
      */
     public void afficherModele(String modele, int coupRestant, int coupMax, int level, boolean developpeur, String combinaison) {
+        logger.trace("affichage du modèle");
+
         if (coupRestant == coupMax) {
             String modelDeBase = "";
             int i;
@@ -22,10 +29,14 @@ public abstract class Joueur {
             if (developpeur)
                 System.out.println(combinaison+ " <== SOLUTION - Mode developpeur : ON");
             System.out.println(modelDeBase);
+            logger.debug("modèle affiché : " +modelDeBase);
         }else {
             if (developpeur)
                 System.out.println(combinaison+ " <== SOLUTION - Mode developpeur : ON");
             System.out.println(modele);
+            logger.debug("modèle affiché : " +modele);
         }
+
+        logger.trace("fin d'affichage du modèle");
     }
 }

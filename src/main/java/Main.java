@@ -1,6 +1,15 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Main {
 
+    //log class Main
+    static final Logger logger = LogManager.getLogger(Main.class);
+
     public static void main(String[] args) {
+
+        //début du jeu
+        logger.info("début du jeu");
 
         Mode mode = new Mode();
         Gestion gestion = new Gestion();
@@ -10,6 +19,10 @@ public class Main {
         int CASE_COMBINAISON = chargement.getCaseCombinaison();
         int COUP_MAX = chargement.getCoupMax();
         boolean DEVELOPPEUR = chargement.isDeveloppeur();
+        logger.trace("Chargement des paramètres");
+        logger.debug("caseCombinaison = " +CASE_COMBINAISON);
+        logger.debug("coupMax = " +COUP_MAX);
+        logger.debug("modeDeveloppeur = " +DEVELOPPEUR);
 
         //mode de jeu
         int modeDeJeu = 0; // 1 - Challenger   2 - Défenseur   3 - Duel  (4 - sortie du programme, seulement proposé au moment de rejouer)
@@ -35,7 +48,9 @@ public class Main {
             modeDeJeu = gestion.choixRejouer(modeDeJeu);
         }while (modeDeJeu != 4);
 
+        //fin du jeu
         gestion.auRevoir();
+        logger.info("fin du jeu");
 
     }
 }

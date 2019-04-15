@@ -1,6 +1,11 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Map;
 
 public class Mode {
+
+    static final Logger logger = LogManager.getLogger(Mode.class);
 
     //déclaration objets
     private JoueurHumain humain = new JoueurHumain();
@@ -15,6 +20,8 @@ public class Mode {
      * @param developpeur mode développeur activé ou non ( on : affiche la solution à l'écran)
      */
     public void challenger(int coupMax, int caseCombinaison, boolean developpeur){
+        logger.trace("début mode challenger");
+
         String combinaisonA = IA.genererCombinaison(coupMax, caseCombinaison);   //Combinaison Attaquant
         String combinaisonD ="";                                                 //Combinaison Défenseur
         String modele ="";                                                       //Modèle ("+-+=")
@@ -34,7 +41,10 @@ public class Mode {
             System.out.println("\nGagné! Tu as trouvé ma combinaison en " +(coupMax-coupRestant)+ " coup(s) !!");
         else
             System.out.println("\nPerdu! Tu n'as pas trouvé ma combinaison ! C'était : " + combinaisonA + "...");
+
+        logger.trace("fin mode challenger");
     }
+
 
     /**
      * lance le mode Défenseur (L'IA doit trouver la combinaison donnée par le joueur humain)
@@ -43,6 +53,8 @@ public class Mode {
      * @param developpeur mode développeur activé ou non ( on : affiche la solution à l'écran)
      */
     public void defenseur(int coupMax, int caseCombinaison, boolean developpeur){
+        logger.trace("début mode défenseur");
+
         String combinaisonA = humain.genererCombinaison(coupMax, caseCombinaison);
         String combinaisonD ="";
         String modele ="";
@@ -62,6 +74,8 @@ public class Mode {
             System.out.println("\nPerdu! J'ai trouvé ta combinaison en " +(coupMax-coupRestant)+ " coup(s) !!");
         else
             System.out.println("\nGagné! Je n'ai pas réussi à trouver ta combinaison : " +combinaisonA+ "... ");
+
+        logger.trace("fin mode défenseur");
     }
 
     /**
@@ -72,6 +86,8 @@ public class Mode {
      * @param developpeur mode développeur activé ou non ( on : affiche la solution à l'écran)
      */
     public void duel(int coupMax, int caseCombinaison, boolean developpeur) {
+        logger.trace("début mode duel");
+
         String combinaisonAHumain = IA.genererCombinaison(coupMax, caseCombinaison);
         String combinaisonDHumain = "";
         String combinaisonAIA = humain.genererCombinaison(coupMax, caseCombinaison);
@@ -118,5 +134,7 @@ public class Mode {
             System.out.println("Ma combinaison était : " +combinaisonAHumain+ "!");
             System.out.println("Et la tienne était : " +combinaisonAIA+ " ...");
         }
+
+        logger.trace("fin mode duel");
     }
 }
