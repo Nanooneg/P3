@@ -29,7 +29,7 @@ public class Mode {
         gestion.couleurPolice(1);
         //boucle de déroulement du jeu : affichage du mogèle -> réponse du defenseur -> comparaison
         while (!combinaisonA.equals(combinaisonD) && coupRestant != 0) {
-            humain.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
+            humain.afficherModele(modele, caseCombinaison, developpeur, combinaisonA);
             combinaisonD = humain.genererReponse(coupRestant, coupMax, caseCombinaison);
             modele = gestion.comparer(combinaisonA, combinaisonD);
             //Compteurs
@@ -62,9 +62,9 @@ public class Mode {
         Map<Integer,String> memoire = historique.initialiser(caseCombinaison);
         gestion.couleurPolice(2);
         while (!combinaisonA.equals(combinaisonD) && coupRestant != 0) {
-            IA.afficherModele(modele, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonA);
+            IA.afficherModele(modele, caseCombinaison, developpeur, combinaisonA);
             memoire = IA.genererReponse(coupRestant, coupMax, modele, memoire);
-            combinaisonD = historique.lireReponse(memoire,memoire.size());
+            combinaisonD = historique.lireReponse(memoire);
             System.out.println(combinaisonD);
             modele = gestion.comparer(combinaisonA, combinaisonD);
             coupRestant--;
@@ -103,16 +103,16 @@ public class Mode {
             System.out.println("***Tour" +((coupMax-coupRestant)+1)+ "***");
             //---Tour humain---
             gestion.couleurPolice(1);
-            humain.afficherModele(modeleHumain, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonAHumain);
+            humain.afficherModele(modeleHumain, caseCombinaison, developpeur, combinaisonAHumain);
             combinaisonDHumain = humain.genererReponse(coupRestant, coupMax, caseCombinaison);
             modeleHumain = gestion.comparer(combinaisonAHumain, combinaisonDHumain);
             gestion.couleurPolice(3);
             gestion.decor("simple",false,false);
             //---Tour IA---
             gestion.couleurPolice(2);
-            IA.afficherModele(modeleIA, coupRestant, coupMax, caseCombinaison, developpeur, combinaisonAIA);
+            IA.afficherModele(modeleIA, caseCombinaison, developpeur, combinaisonAIA);
             memoire = IA.genererReponse(coupRestant, coupMax, modeleIA, memoire);
-            combinaisonDIA = historique.lireReponse(memoire,memoire.size());
+            combinaisonDIA = historique.lireReponse(memoire);
             System.out.println(combinaisonDIA);
             modeleIA = gestion.comparer(combinaisonAIA, combinaisonDIA);
             //compteurs

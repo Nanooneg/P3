@@ -11,25 +11,23 @@ public abstract class Joueur {
      * affiche la Combinaison masquée
      * XXXX au départ pui +=+- en fonction des réponses du joueur défenseur
      * @param modele modéle masqué à afficher
-     * @param coupRestant nombre de coup(s) restant
-     * @param coupMax nombre de coup(s) alloué(s) au début du jeu
      * @param level nombre de case de la Combinaison
      * @param developpeur mode développeur on/off
      * @param combinaison Combinaison à trouver
      */
-    public void afficherModele(String modele, int coupRestant, int coupMax, int level, boolean developpeur, String combinaison) {
+    public void afficherModele(String modele, int level, boolean developpeur, String combinaison) {
         logger.trace("affichage du modèle");
 
-        if (coupRestant == coupMax) {
-            String modelDeBase = "";
+        if (modele.equals("")) {
+
             int i;
             for (i = 0; i < level; i++){
-                modelDeBase += "X";
+                modele += "X";
             }
             if (developpeur)
                 System.out.println(combinaison+ " <== SOLUTION - Mode developpeur : ON");
-            System.out.println(modelDeBase);
-            logger.debug("modèle affiché : " +modelDeBase);
+            System.out.println(modele);
+            logger.debug("modèle affiché : " +modele);
         }else {
             if (developpeur)
                 System.out.println(combinaison+ " <== SOLUTION - Mode developpeur : ON");

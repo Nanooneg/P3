@@ -11,7 +11,8 @@ public class JoueurIA extends Joueur {
 
     /**
      * Crée une Combinaison aléatoire
-     * @param nombreChiffre nombre de case que comporte la Combinaison à générer
+     * @param coupMax nombre de coup(s) max pour trouver la bonne réponse
+     * @param nombreChiffre nombre de chiffres que doit comporter la combinaison
      * @return la Combinaison générée
      */
     @Override
@@ -54,9 +55,7 @@ public class JoueurIA extends Joueur {
 
         int i, min, max;
         if (memoire.get(0).isEmpty()){
-            logger.debug(memoire.size()+ " valeur(s) à ajouter à la mémoire :");
             for (i=0; i<memoire.size(); i++) {
-                logger.debug("ajouts à la mémoire -> clé : " +i+ " valeur : 5");
                 historique.ajouter(memoire,i,"5");
             }
             System.out.println("J'ai " +coupMax+ " coup(s) pour trouver : ");
@@ -65,24 +64,23 @@ public class JoueurIA extends Joueur {
             for (i=0; i<memoire.size(); i++){
                 switch (caractereModele[i]){
                     case '+' :
-                        //récupère le dernier chiffre généré dans la réponse précédante
-                        min = Integer.valueOf(historique.lireReponse(memoire,i));
-                        max = 9;
+                        historique.ajouter(memoire,i,"+");
+                        min = historique.lireMinimum(memoire.get(i));
+                        max = historique.lireMaximum(memoire.get(i));
                         do {
                             temp = String.valueOf(min + (int) (Math.random() * ((max - min) + 1)));
                         }while (!historique.parcourir(memoire,i,temp));
 
-                        logger.debug("ajouts à la mémoire -> clé : " +i+ " valeur : " +temp);
                         historique.ajouter(memoire,i,temp);
                         break;
                     case '-' :
-                        min = 0;
-                        max = Integer.valueOf(historique.lireReponse(memoire,i));
+                        historique.ajouter(memoire,i,"-");
+                        min = historique.lireMinimum(memoire.get(i));
+                        max = historique.lireMaximum(memoire.get(i));
                         do {
                             temp = String.valueOf(min + (int) (Math.random() * ((max - min) + 1)));
                         }while (!historique.parcourir(memoire,i,temp));
 
-                        logger.debug("ajouts à la mémoire -> clé : " +i+ " valeur : " +temp);
                         historique.ajouter(memoire,i,temp);
                         break;
                 }

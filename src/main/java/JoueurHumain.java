@@ -14,13 +14,14 @@ public class JoueurHumain extends Joueur {
     /**
      * Demande à l'attaquant humain de saisir un combinaison que le défenseur IA devra trouver en X coup(s)
      * @param coupMax nombre de coup(s) max pour trouver la bonne réponse
-     * @return la combinaison à trouver
+     * @param nombreChiffre nombre de chiffres que doit comporter la combinaison
+     * @return la combinaison saisie
      */
     @Override
     public String genererCombinaison(int coupMax, int nombreChiffre) {
         logger.trace("début de demande à l'utilisateur de donner une combinaison");
 
-        boolean saisieOk = true;
+        boolean saisieOk;
         int temp;
         String combinaison ="";
         System.out.println("Choisi une Combinaison de " +nombreChiffre+" chiffres que je devrai trouver en moins de " +coupMax+ " coups.");
@@ -42,10 +43,9 @@ public class JoueurHumain extends Joueur {
                 System.out.println("Choisi une Combinaison de " +nombreChiffre+" chiffres que je devrai trouver en moins de " +coupMax+ " coups.");
             }
         }while (!saisieOk);
-        System.out.println("");
+        System.out.print("\n");
 
         logger.trace("fin de demande à l'utilisateur de donner une combinaison");
-        logger.debug("réponse renvoyé : " +combinaison);
         return combinaison;
     }
 
@@ -58,8 +58,8 @@ public class JoueurHumain extends Joueur {
      * */
     public String genererReponse(int coupRestant, int coupMax, int nombreChiffre) {
         logger.trace("début de demande à l'utilisateur de donner une réponse");
-        boolean saisieOk = true;
-        int temp = 0;
+        boolean saisieOk;
+        int temp;
         String reponse ="";
         if (coupRestant == coupMax) {
             System.out.println("Tu dois trouver ma Combinaison de " +nombreChiffre+ " chiffre(s) en moins de " + coupMax + " coup(s)");
@@ -67,12 +67,10 @@ public class JoueurHumain extends Joueur {
             System.out.println("Dernier coup !!! Saisi une Combinaison de " + nombreChiffre + " chiffres :");
         } else {
             System.out.println("Il te reste " + coupRestant + " coup(s)");
-            System.out.println("Saisi une Combinaison de " + nombreChiffre + " chiffres :");
+            System.out.println("Saisi une Combinaison de " + nombreChiffre + " chiffre(s) :");
         }
 
         do {
-            if (!saisieOk)
-                System.out.println("Erreur de saisie!");
             try {
                 temp = sc.nextInt();
                 logger.debug("Saisie utilisateur : " +temp);
@@ -83,9 +81,14 @@ public class JoueurHumain extends Joueur {
                 logger.error("Erreur de saisie !!");
                 saisieOk = false;
             }
+            if (!saisieOk) {
+                gestion.couleurPolice(4);
+                System.out.println("Erreur de saisie!");
+                gestion.couleurPolice(1);
+                System.out.println("Saisi une combinaison de " + nombreChiffre + " chiffre(s) :");
+            }
         }while (!saisieOk);
         logger.trace("fin de demande à l'utilisateur de donner une réponse");
-        logger.debug("réponse renvoyé : " +reponse);
         return reponse;
     }
 

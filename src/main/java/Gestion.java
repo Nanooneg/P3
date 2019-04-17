@@ -38,7 +38,8 @@ public class Gestion {
      * @return le choix du mode de jeu
      */
     public int choixMode(){
-        logger.trace("ouverture menu des choix \"modes\"");
+        logger.trace("ouverture menu \"modes\"");
+        logger.debug("1=challenger 2=défenseur 3=duel");
 
         int choix = 0;
         boolean saisieOk = true;
@@ -70,7 +71,7 @@ public class Gestion {
 
         this.decor("double",true,true);
 
-        logger.trace("fermture du menu des choix \"modes\"");
+        logger.trace("fermture du menu \"modes\"");
         logger.debug("choix renvoyé : " +choix);
         return choix;
     }
@@ -104,7 +105,7 @@ public class Gestion {
         }
 
         logger.trace("fin comparaison des combinaisons");
-        logger.debug("modèle renvoyé : " +modele);
+        logger.debug("combinaisonA : " +combinaison+ " combinaisonD : " +reponse+ " modèle renvoyé : " +modele);
         return modele;
     }
 
@@ -114,7 +115,8 @@ public class Gestion {
      * @return nouveau mode de jeu (4 étant la sortie du programme et 0 un reboot)
      */
     public int choixRejouer(int modeDeJeu){
-        logger.trace("ouverture menu des choix \"rejouer\"");
+        logger.trace("ouverture menu \"rejouer\"");
+        logger.debug("1=rejouer 2=retour menu 3=quitter");
         System.out.print("\033[30m");   //police en Blanc
         int choix = 0;
         boolean saisieOk = true;
@@ -156,8 +158,7 @@ public class Gestion {
                 break;
         }
 
-        logger.trace("fermeture du menu des choix \"rejouer\"");
-        logger.debug("choix renvoyé : " +choix);
+        logger.trace("fermeture du menu \"rejouer\"");
         return modeDeJeu;
     }
 

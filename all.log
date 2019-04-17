@@ -1,431 +1,414 @@
-2019-04-15 13:22:27.799 INFO  [Main] (main) - début du jeu
-2019-04-15 13:22:27.814 TRACE [Main] (main) - Chargement des paramètres
-2019-04-15 13:22:27.814 DEBUG [Main] (main) - caseCombinaison = 4
-2019-04-15 13:22:27.814 DEBUG [Main] (main) - coupMax = 10
-2019-04-15 13:22:27.814 DEBUG [Main] (main) - modeDeveloppeur = false
-2019-04-15 13:22:27.814 TRACE [Gestion] (presenter) - affichage de la présentation du jeu
-2019-04-15 13:22:27.814 TRACE [Gestion] (choixMode) - ouverture menu des choix "modes"
-2019-04-15 13:22:31.031 DEBUG [Gestion] (choixMode) - Saisie utilisateur : 2
-2019-04-15 13:22:31.031 TRACE [Gestion] (choixMode) - fermture du menu des choix "modes"
-2019-04-15 13:22:31.031 DEBUG [Gestion] (choixMode) - choix renvoyé : 2
-2019-04-15 13:22:31.031 TRACE [Mode] (defenseur) - début mode défenseur
-2019-04-15 13:22:31.031 TRACE [JoueurHumain] (genererCombinaison) - début de demande à l'utilisateur de donner une combinaison
-2019-04-15 13:22:33.613 DEBUG [JoueurHumain] (genererCombinaison) - Saisie utilisateur : 4686
-2019-04-15 13:22:33.613 TRACE [JoueurHumain] (genererCombinaison) - fin de demande à l'utilisateur de donner une combinaison
-2019-04-15 13:22:33.613 DEBUG [JoueurHumain] (genererCombinaison) - réponse renvoyé : 4686
-2019-04-15 13:22:33.613 TRACE [Historique] (initialiser) - début initialistion map historique
-2019-04-15 13:22:33.613 DEBUG [Historique] (initialiser) - la map doit contenir 4 couple(s) clé/valeur
-2019-04-15 13:22:33.613 DEBUG [Historique] (initialiser) - état de la map : {0=, 1=, 2=, 3=}
-2019-04-15 13:22:33.613 TRACE [Historique] (initialiser) - fin initialistion map historique
-2019-04-15 13:22:33.613 DEBUG [Historique] (initialiser) - map renvoyée : {0=, 1=, 2=, 3=}
-2019-04-15 13:22:33.613 TRACE [Joueur] (afficherModele) - affichage du modèle
-2019-04-15 13:22:33.613 DEBUG [Joueur] (afficherModele) - modèle affiché : 
-2019-04-15 13:22:33.613 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
-2019-04-15 13:22:33.613 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.613 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
-2019-04-15 13:22:33.613 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=, 1=, 2=, 3=}
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=, 2=, 3=}
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map : {0=5, 1=, 2=, 3=}
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 0 valeur : 5
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=, 2=, 3=}
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=, 3=}
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map : {0=5, 1=5, 2=, 3=}
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 1 valeur : 5
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=, 3=}
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=5, 3=}
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map : {0=5, 1=5, 2=5, 3=}
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 2 valeur : 5
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=5, 3=}
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=5, 3=5}
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map : {0=5, 1=5, 2=5, 3=5}
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 3 valeur : 5
-2019-04-15 13:22:33.628 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=5, 1=5, 2=5, 3=5}
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - 4 premiers chiffres de chaque clé à lire
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - état de la map : {0=5, 1=5, 2=5, 3=5}
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre 1 : 5
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre 2 : 55
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre 3 : 555
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre 4 : 5555
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - réponse renvoyée : 5555
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.628 TRACE [Gestion] (comparer) - début comparaison des combinaisons
-2019-04-15 13:22:33.628 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
-2019-04-15 13:22:33.628 DEBUG [Gestion] (comparer) - modèle renvoyé : -+++
-2019-04-15 13:22:33.628 TRACE [Joueur] (afficherModele) - affichage du modèle
-2019-04-15 13:22:33.628 DEBUG [Joueur] (afficherModele) - modèle affiché : -+++
-2019-04-15 13:22:33.628 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
-2019-04-15 13:22:33.628 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - état de la map à la clé 0 : 5
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre lu : 5
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.628 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.628 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (parcourir) - valeur 2 associée à la clé 0 est nouvelle  : true
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=5, 3=5}
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=25, 1=5, 2=5, 3=5}
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map : {0=25, 1=5, 2=5, 3=5}
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 0 valeur : 2
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - état de la map à la clé 1 : 5
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre lu : 5
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.628 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.628 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (parcourir) - valeur 9 associée à la clé 1 est nouvelle  : true
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=25, 1=5, 2=5, 3=5}
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=25, 1=95, 2=5, 3=5}
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map : {0=25, 1=95, 2=5, 3=5}
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 1 valeur : 9
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - état de la map à la clé 2 : 5
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre lu : 5
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.628 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.628 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (parcourir) - valeur 8 associée à la clé 2 est nouvelle  : true
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=25, 1=95, 2=5, 3=5}
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=25, 1=95, 2=85, 3=5}
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map : {0=25, 1=95, 2=85, 3=5}
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 2 valeur : 8
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - état de la map à la clé 3 : 5
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre lu : 5
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.628 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.628 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (parcourir) - valeur 7 associée à la clé 3 est nouvelle  : true
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=25, 1=95, 2=85, 3=5}
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=25, 1=95, 2=85, 3=75}
-2019-04-15 13:22:33.628 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (ajouter) - état de la map : {0=25, 1=95, 2=85, 3=75}
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 3 valeur : 7
-2019-04-15 13:22:33.628 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.628 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=25, 1=95, 2=85, 3=75}
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - 4 premiers chiffres de chaque clé à lire
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - état de la map : {0=25, 1=95, 2=85, 3=75}
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre 1 : 2
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre 2 : 29
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre 3 : 298
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - chiffre 4 : 2987
-2019-04-15 13:22:33.628 DEBUG [Historique] (lireReponse) - réponse renvoyée : 2987
-2019-04-15 13:22:33.628 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.628 TRACE [Gestion] (comparer) - début comparaison des combinaisons
-2019-04-15 13:22:33.628 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
-2019-04-15 13:22:33.628 DEBUG [Gestion] (comparer) - modèle renvoyé : +-=-
-2019-04-15 13:22:33.628 TRACE [Joueur] (afficherModele) - affichage du modèle
-2019-04-15 13:22:33.628 DEBUG [Joueur] (afficherModele) - modèle affiché : +-=-
-2019-04-15 13:22:33.644 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
-2019-04-15 13:22:33.644 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - état de la map à la clé 0 : 25
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre lu : 2
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 6 associée à la clé 0 est nouvelle  : true
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=25, 1=95, 2=85, 3=75}
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=625, 1=95, 2=85, 3=75}
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map : {0=625, 1=95, 2=85, 3=75}
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 0 valeur : 6
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - état de la map à la clé 1 : 95
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre lu : 9
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 7 associée à la clé 1 est nouvelle  : true
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=625, 1=95, 2=85, 3=75}
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=625, 1=795, 2=85, 3=75}
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map : {0=625, 1=795, 2=85, 3=75}
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 1 valeur : 7
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - état de la map à la clé 3 : 75
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre lu : 7
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 7 associée à la clé 3 est nouvelle  : false
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 2 associée à la clé 3 est nouvelle  : true
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=625, 1=795, 2=85, 3=75}
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=625, 1=795, 2=85, 3=275}
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map : {0=625, 1=795, 2=85, 3=275}
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 3 valeur : 2
-2019-04-15 13:22:33.644 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=625, 1=795, 2=85, 3=275}
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - 4 premiers chiffres de chaque clé à lire
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - état de la map : {0=625, 1=795, 2=85, 3=275}
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre 1 : 6
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre 2 : 67
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre 3 : 678
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre 4 : 6782
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - réponse renvoyée : 6782
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.644 TRACE [Gestion] (comparer) - début comparaison des combinaisons
-2019-04-15 13:22:33.644 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
-2019-04-15 13:22:33.644 DEBUG [Gestion] (comparer) - modèle renvoyé : --=+
-2019-04-15 13:22:33.644 TRACE [Joueur] (afficherModele) - affichage du modèle
-2019-04-15 13:22:33.644 DEBUG [Joueur] (afficherModele) - modèle affiché : --=+
-2019-04-15 13:22:33.644 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
-2019-04-15 13:22:33.644 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - état de la map à la clé 0 : 625
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre lu : 6
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 4 associée à la clé 0 est nouvelle  : true
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=625, 1=795, 2=85, 3=275}
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=4625, 1=795, 2=85, 3=275}
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map : {0=4625, 1=795, 2=85, 3=275}
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 0 valeur : 4
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - état de la map à la clé 1 : 795
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre lu : 7
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 2 associée à la clé 1 est nouvelle  : true
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=4625, 1=795, 2=85, 3=275}
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=4625, 1=2795, 2=85, 3=275}
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map : {0=4625, 1=2795, 2=85, 3=275}
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 1 valeur : 2
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - état de la map à la clé 3 : 275
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre lu : 2
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 3 associée à la clé 3 est nouvelle  : true
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=4625, 1=2795, 2=85, 3=275}
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=4625, 1=2795, 2=85, 3=3275}
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map : {0=4625, 1=2795, 2=85, 3=3275}
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 3 valeur : 3
-2019-04-15 13:22:33.644 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=4625, 1=2795, 2=85, 3=3275}
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - 4 premiers chiffres de chaque clé à lire
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - état de la map : {0=4625, 1=2795, 2=85, 3=3275}
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre 1 : 4
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre 2 : 42
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre 3 : 428
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre 4 : 4283
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - réponse renvoyée : 4283
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.644 TRACE [Gestion] (comparer) - début comparaison des combinaisons
-2019-04-15 13:22:33.644 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
-2019-04-15 13:22:33.644 DEBUG [Gestion] (comparer) - modèle renvoyé : =+=+
-2019-04-15 13:22:33.644 TRACE [Joueur] (afficherModele) - affichage du modèle
-2019-04-15 13:22:33.644 DEBUG [Joueur] (afficherModele) - modèle affiché : =+=+
-2019-04-15 13:22:33.644 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
-2019-04-15 13:22:33.644 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - état de la map à la clé 1 : 2795
-2019-04-15 13:22:33.644 DEBUG [Historique] (lireReponse) - chiffre lu : 2
-2019-04-15 13:22:33.644 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 2 associée à la clé 1 est nouvelle  : false
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 2 associée à la clé 1 est nouvelle  : false
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 2 associée à la clé 1 est nouvelle  : false
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 7 associée à la clé 1 est nouvelle  : false
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.644 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (parcourir) - valeur 8 associée à la clé 1 est nouvelle  : true
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=4625, 1=2795, 2=85, 3=3275}
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=4625, 1=82795, 2=85, 3=3275}
-2019-04-15 13:22:33.644 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.644 DEBUG [Historique] (ajouter) - état de la map : {0=4625, 1=82795, 2=85, 3=3275}
-2019-04-15 13:22:33.644 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 1 valeur : 8
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - état de la map à la clé 3 : 3275
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre lu : 3
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (parcourir) - valeur 8 associée à la clé 3 est nouvelle  : true
-2019-04-15 13:22:33.659 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=4625, 1=82795, 2=85, 3=3275}
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=4625, 1=82795, 2=85, 3=83275}
-2019-04-15 13:22:33.659 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map : {0=4625, 1=82795, 2=85, 3=83275}
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 3 valeur : 8
-2019-04-15 13:22:33.659 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=4625, 1=82795, 2=85, 3=83275}
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - 4 premiers chiffres de chaque clé à lire
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - état de la map : {0=4625, 1=82795, 2=85, 3=83275}
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 1 : 4
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 2 : 48
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 3 : 488
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 4 : 4888
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - réponse renvoyée : 4888
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.659 TRACE [Gestion] (comparer) - début comparaison des combinaisons
-2019-04-15 13:22:33.659 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
-2019-04-15 13:22:33.659 DEBUG [Gestion] (comparer) - modèle renvoyé : =-=-
-2019-04-15 13:22:33.659 TRACE [Joueur] (afficherModele) - affichage du modèle
-2019-04-15 13:22:33.659 DEBUG [Joueur] (afficherModele) - modèle affiché : =-=-
-2019-04-15 13:22:33.659 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
-2019-04-15 13:22:33.659 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - état de la map à la clé 1 : 82795
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre lu : 8
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (parcourir) - valeur 6 associée à la clé 1 est nouvelle  : true
-2019-04-15 13:22:33.659 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=4625, 1=82795, 2=85, 3=83275}
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=4625, 1=682795, 2=85, 3=83275}
-2019-04-15 13:22:33.659 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map : {0=4625, 1=682795, 2=85, 3=83275}
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 1 valeur : 6
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - état de la map à la clé 3 : 83275
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre lu : 8
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (parcourir) - valeur 3 associée à la clé 3 est nouvelle  : false
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (parcourir) - valeur 2 associée à la clé 3 est nouvelle  : false
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (parcourir) - valeur 1 associée à la clé 3 est nouvelle  : true
-2019-04-15 13:22:33.659 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=4625, 1=682795, 2=85, 3=83275}
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=4625, 1=682795, 2=85, 3=183275}
-2019-04-15 13:22:33.659 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map : {0=4625, 1=682795, 2=85, 3=183275}
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 3 valeur : 1
-2019-04-15 13:22:33.659 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=4625, 1=682795, 2=85, 3=183275}
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - 4 premiers chiffres de chaque clé à lire
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - état de la map : {0=4625, 1=682795, 2=85, 3=183275}
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 1 : 4
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 2 : 46
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 3 : 468
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 4 : 4681
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - réponse renvoyée : 4681
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.659 TRACE [Gestion] (comparer) - début comparaison des combinaisons
-2019-04-15 13:22:33.659 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
-2019-04-15 13:22:33.659 DEBUG [Gestion] (comparer) - modèle renvoyé : ===+
-2019-04-15 13:22:33.659 TRACE [Joueur] (afficherModele) - affichage du modèle
-2019-04-15 13:22:33.659 DEBUG [Joueur] (afficherModele) - modèle affiché : ===+
-2019-04-15 13:22:33.659 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
-2019-04-15 13:22:33.659 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - état de la map à la clé 3 : 183275
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre lu : 1
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (parcourir) - valeur 4 associée à la clé 3 est nouvelle  : true
-2019-04-15 13:22:33.659 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=4625, 1=682795, 2=85, 3=183275}
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=4625, 1=682795, 2=85, 3=4183275}
-2019-04-15 13:22:33.659 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map : {0=4625, 1=682795, 2=85, 3=4183275}
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 3 valeur : 4
-2019-04-15 13:22:33.659 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=4625, 1=682795, 2=85, 3=4183275}
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - 4 premiers chiffres de chaque clé à lire
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - état de la map : {0=4625, 1=682795, 2=85, 3=4183275}
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 1 : 4
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 2 : 46
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 3 : 468
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 4 : 4684
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - réponse renvoyée : 4684
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.659 TRACE [Gestion] (comparer) - début comparaison des combinaisons
-2019-04-15 13:22:33.659 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
-2019-04-15 13:22:33.659 DEBUG [Gestion] (comparer) - modèle renvoyé : ===+
-2019-04-15 13:22:33.659 TRACE [Joueur] (afficherModele) - affichage du modèle
-2019-04-15 13:22:33.659 DEBUG [Joueur] (afficherModele) - modèle affiché : ===+
-2019-04-15 13:22:33.659 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
-2019-04-15 13:22:33.659 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - état de la map à la clé 3 : 4183275
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre lu : 4
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - début de lecture de la map
-2019-04-15 13:22:33.659 TRACE [Historique] (parcourir) - fin de lecture de la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (parcourir) - valeur 6 associée à la clé 3 est nouvelle  : true
-2019-04-15 13:22:33.659 TRACE [Historique] (ajouter) - début d'ajout dans la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=4625, 1=682795, 2=85, 3=4183275}
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=4625, 1=682795, 2=85, 3=64183275}
-2019-04-15 13:22:33.659 TRACE [Historique] (ajouter) - fin d'ajout dans la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (ajouter) - état de la map : {0=4625, 1=682795, 2=85, 3=64183275}
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - ajouts à la mémoire -> clé : 3 valeur : 6
-2019-04-15 13:22:33.659 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
-2019-04-15 13:22:33.659 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=4625, 1=682795, 2=85, 3=64183275}
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - début de lecture dans  la map
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - 4 premiers chiffres de chaque clé à lire
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - état de la map : {0=4625, 1=682795, 2=85, 3=64183275}
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 1 : 4
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 2 : 46
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 3 : 468
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - chiffre 4 : 4686
-2019-04-15 13:22:33.659 DEBUG [Historique] (lireReponse) - réponse renvoyée : 4686
-2019-04-15 13:22:33.659 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
-2019-04-15 13:22:33.659 TRACE [Gestion] (comparer) - début comparaison des combinaisons
-2019-04-15 13:22:33.659 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
-2019-04-15 13:22:33.659 DEBUG [Gestion] (comparer) - modèle renvoyé : ====
-2019-04-15 13:22:33.659 TRACE [Mode] (defenseur) - fin mode défenseur
-2019-04-15 13:22:33.659 TRACE [Gestion] (choixRejouer) - ouverture menu des choix "rejouer"
-2019-04-15 13:22:36.692 DEBUG [Gestion] (choixRejouer) - Saisie utilisateur : 3
-2019-04-15 13:22:36.692 TRACE [Gestion] (choixRejouer) - fermeture du menu des choix "rejouer"
-2019-04-15 13:22:36.692 DEBUG [Gestion] (choixRejouer) - choix renvoyé : 3
-2019-04-15 13:22:36.692 TRACE [Gestion] (auRevoir) - affichage message d'au revoir
+2019-04-17 18:36:21.069 INFO  [Main] (main) - début du jeu
+2019-04-17 18:36:21.085 TRACE [Main] (main) - Chargement des paramètres
+2019-04-17 18:36:21.085 DEBUG [Main] (main) - caseCombinaison = 4
+2019-04-17 18:36:21.085 DEBUG [Main] (main) - coupMax = 10
+2019-04-17 18:36:21.085 DEBUG [Main] (main) - modeDeveloppeur = false
+2019-04-17 18:36:21.085 TRACE [Gestion] (presenter) - affichage de la présentation du jeu
+2019-04-17 18:36:21.085 TRACE [Gestion] (choixMode) - ouverture menu "modes"
+2019-04-17 18:36:21.085 DEBUG [Gestion] (choixMode) - 1=challenger 2=défenseur 3=duel
+2019-04-17 18:36:23.667 DEBUG [Gestion] (choixMode) - Saisie utilisateur : 1
+2019-04-17 18:36:23.667 TRACE [Gestion] (choixMode) - fermture du menu "modes"
+2019-04-17 18:36:23.667 DEBUG [Gestion] (choixMode) - choix renvoyé : 1
+2019-04-17 18:36:23.667 TRACE [Mode] (challenger) - début mode challenger
+2019-04-17 18:36:23.667 TRACE [JoueurIA] (genererCombinaison) - début de demande à l'IA de générer une combinaison
+2019-04-17 18:36:23.667 DEBUG [JoueurIA] (genererCombinaison) - 4 chiffre à générer aléatoirement :
+2019-04-17 18:36:23.667 DEBUG [JoueurIA] (genererCombinaison) - chiffre 1 généré : 3
+2019-04-17 18:36:23.667 DEBUG [JoueurIA] (genererCombinaison) - chiffre 2 généré : 1
+2019-04-17 18:36:23.667 DEBUG [JoueurIA] (genererCombinaison) - chiffre 3 généré : 4
+2019-04-17 18:36:23.667 DEBUG [JoueurIA] (genererCombinaison) - chiffre 4 généré : 0
+2019-04-17 18:36:23.667 TRACE [JoueurIA] (genererCombinaison) - fin de demande à l'IA de générer une combinaison
+2019-04-17 18:36:23.667 DEBUG [JoueurIA] (genererCombinaison) - combinaison renvoyée : 3140
+2019-04-17 18:36:23.667 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:36:23.667 DEBUG [Joueur] (afficherModele) - modèle affiché : XXXX
+2019-04-17 18:36:23.667 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:36:23.667 TRACE [JoueurHumain] (genererReponse) - début de demande à l'utilisateur de donner une réponse
+2019-04-17 18:36:25.150 DEBUG [JoueurHumain] (genererReponse) - Saisie utilisateur : 5555
+2019-04-17 18:36:25.150 TRACE [JoueurHumain] (genererReponse) - fin de demande à l'utilisateur de donner une réponse
+2019-04-17 18:36:25.150 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:36:25.150 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:36:25.150 DEBUG [Gestion] (comparer) - combinaisonA : 3140 combinaisonD : 5555 modèle renvoyé : ----
+2019-04-17 18:36:25.150 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:36:25.150 DEBUG [Joueur] (afficherModele) - modèle affiché : ----
+2019-04-17 18:36:25.150 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:36:25.150 TRACE [JoueurHumain] (genererReponse) - début de demande à l'utilisateur de donner une réponse
+2019-04-17 18:36:27.357 DEBUG [JoueurHumain] (genererReponse) - Saisie utilisateur : 3333
+2019-04-17 18:36:27.372 TRACE [JoueurHumain] (genererReponse) - fin de demande à l'utilisateur de donner une réponse
+2019-04-17 18:36:27.372 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:36:27.372 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:36:27.372 DEBUG [Gestion] (comparer) - combinaisonA : 3140 combinaisonD : 3333 modèle renvoyé : =-+-
+2019-04-17 18:36:27.372 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:36:27.372 DEBUG [Joueur] (afficherModele) - modèle affiché : =-+-
+2019-04-17 18:36:27.372 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:36:27.372 TRACE [JoueurHumain] (genererReponse) - début de demande à l'utilisateur de donner une réponse
+2019-04-17 18:36:31.331 DEBUG [JoueurHumain] (genererReponse) - Saisie utilisateur : 3141
+2019-04-17 18:36:31.331 TRACE [JoueurHumain] (genererReponse) - fin de demande à l'utilisateur de donner une réponse
+2019-04-17 18:36:31.331 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:36:31.331 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:36:31.331 DEBUG [Gestion] (comparer) - combinaisonA : 3140 combinaisonD : 3141 modèle renvoyé : ===-
+2019-04-17 18:36:31.331 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:36:31.331 DEBUG [Joueur] (afficherModele) - modèle affiché : ===-
+2019-04-17 18:36:31.331 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:36:31.331 TRACE [JoueurHumain] (genererReponse) - début de demande à l'utilisateur de donner une réponse
+2019-04-17 18:36:35.473 DEBUG [JoueurHumain] (genererReponse) - Saisie utilisateur : 3140
+2019-04-17 18:36:35.473 TRACE [JoueurHumain] (genererReponse) - fin de demande à l'utilisateur de donner une réponse
+2019-04-17 18:36:35.473 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:36:35.473 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:36:35.473 DEBUG [Gestion] (comparer) - combinaisonA : 3140 combinaisonD : 3140 modèle renvoyé : ====
+2019-04-17 18:36:35.473 TRACE [Mode] (challenger) - fin mode challenger
+2019-04-17 18:36:35.473 TRACE [Gestion] (choixRejouer) - ouverture menu "rejouer"
+2019-04-17 18:36:35.473 DEBUG [Gestion] (choixRejouer) - 1=rejouer 2=retour menu 3=quitter
+2019-04-17 18:37:05.720 DEBUG [Gestion] (choixRejouer) - Saisie utilisateur : 2
+2019-04-17 18:37:05.720 TRACE [Gestion] (choixRejouer) - fermeture du menu "rejouer"
+2019-04-17 18:37:05.720 TRACE [Gestion] (choixMode) - ouverture menu "modes"
+2019-04-17 18:37:05.720 DEBUG [Gestion] (choixMode) - 1=challenger 2=défenseur 3=duel
+2019-04-17 18:37:10.385 DEBUG [Gestion] (choixMode) - Saisie utilisateur : 2
+2019-04-17 18:37:10.385 TRACE [Gestion] (choixMode) - fermture du menu "modes"
+2019-04-17 18:37:10.385 DEBUG [Gestion] (choixMode) - choix renvoyé : 2
+2019-04-17 18:37:10.385 TRACE [Mode] (defenseur) - début mode défenseur
+2019-04-17 18:37:10.385 TRACE [JoueurHumain] (genererCombinaison) - début de demande à l'utilisateur de donner une combinaison
+2019-04-17 18:37:12.543 DEBUG [JoueurHumain] (genererCombinaison) - Saisie utilisateur : 5475
+2019-04-17 18:37:12.543 TRACE [JoueurHumain] (genererCombinaison) - fin de demande à l'utilisateur de donner une combinaison
+2019-04-17 18:37:12.543 TRACE [Historique] (initialiser) - début initialistion map historique
+2019-04-17 18:37:12.543 DEBUG [Historique] (initialiser) - état de la map : {0=, 1=, 2=, 3=}
+2019-04-17 18:37:12.543 TRACE [Historique] (initialiser) - fin initialistion map historique
+2019-04-17 18:37:12.543 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:37:12.543 DEBUG [Joueur] (afficherModele) - modèle affiché : XXXX
+2019-04-17 18:37:12.543 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:37:12.543 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=, 1=, 2=, 3=}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=, 2=, 3=}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=, 2=, 3=}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=, 3=}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=, 3=}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=5, 3=}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=5, 3=}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=5, 3=5}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-17 18:37:12.543 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=5, 1=5, 2=5, 3=5}
+2019-04-17 18:37:12.543 TRACE [Historique] (lireReponse) - début de lecture dans  la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireReponse) - état de la map : {0=5, 1=5, 2=5, 3=5}
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireReponse) - réponse renvoyée : 5555
+2019-04-17 18:37:12.543 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-17 18:37:12.543 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:37:12.543 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:37:12.543 DEBUG [Gestion] (comparer) - combinaisonA : 5475 combinaisonD : 5555 modèle renvoyé : =-+=
+2019-04-17 18:37:12.543 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:37:12.543 DEBUG [Joueur] (afficherModele) - modèle affiché : =-+=
+2019-04-17 18:37:12.543 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:37:12.543 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-17 18:37:12.543 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=5, 3=5}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=-5, 2=5, 3=5}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - chaîne lue : -5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - chaîne lue : -5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - -
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - 5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - nouveau Min : 5
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (parcourir) - valeur 5 associée à la clé 1 est nouvelle  : false
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (parcourir) - valeur 0 associée à la clé 1 est nouvelle  : true
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=-5, 2=5, 3=5}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=0-5, 2=5, 3=5}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=0-5, 2=5, 3=5}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=0-5, 2=+5, 3=5}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - chaîne lue : +5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - +
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - 5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - nouveau Min : 5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - chaîne lue : +5
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (parcourir) - valeur 8 associée à la clé 2 est nouvelle  : true
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=0-5, 2=+5, 3=5}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=0-5, 2=8+5, 3=5}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-17 18:37:12.543 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=5, 1=0-5, 2=8+5, 3=5}
+2019-04-17 18:37:12.543 TRACE [Historique] (lireReponse) - début de lecture dans  la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireReponse) - état de la map : {0=5, 1=0-5, 2=8+5, 3=5}
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireReponse) - réponse renvoyée : 5085
+2019-04-17 18:37:12.543 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-17 18:37:12.543 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:37:12.543 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:37:12.543 DEBUG [Gestion] (comparer) - combinaisonA : 5475 combinaisonD : 5085 modèle renvoyé : =+-=
+2019-04-17 18:37:12.543 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:37:12.543 DEBUG [Joueur] (afficherModele) - modèle affiché : =+-=
+2019-04-17 18:37:12.543 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:37:12.543 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-17 18:37:12.543 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=0-5, 2=8+5, 3=5}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=+0-5, 2=8+5, 3=5}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - chaîne lue : +0-5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - +
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - 0
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - chaîne lue : +0-5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - -
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - 5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - nouveau Min : 5
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (parcourir) - valeur 3 associée à la clé 1 est nouvelle  : true
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=+0-5, 2=8+5, 3=5}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=3+0-5, 2=8+5, 3=5}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=3+0-5, 2=8+5, 3=5}
+2019-04-17 18:37:12.543 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=3+0-5, 2=-8+5, 3=5}
+2019-04-17 18:37:12.543 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - chaîne lue : -8+5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - +
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - 5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMinimum) - nouveau Min : 5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - chaîne lue : -8+5
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - -
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - 8
+2019-04-17 18:37:12.543 DEBUG [Historique] (lireMaximum) - nouveau Min : 8
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (parcourir) - valeur 8 associée à la clé 2 est nouvelle  : false
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:12.543 DEBUG [Historique] (parcourir) - valeur 5 associée à la clé 2 est nouvelle  : false
+2019-04-17 18:37:12.543 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:12.558 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (parcourir) - valeur 6 associée à la clé 2 est nouvelle  : true
+2019-04-17 18:37:12.558 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:12.558 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=3+0-5, 2=-8+5, 3=5}
+2019-04-17 18:37:12.558 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=3+0-5, 2=6-8+5, 3=5}
+2019-04-17 18:37:12.558 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.558 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-17 18:37:12.558 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=5, 1=3+0-5, 2=6-8+5, 3=5}
+2019-04-17 18:37:12.558 TRACE [Historique] (lireReponse) - début de lecture dans  la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireReponse) - état de la map : {0=5, 1=3+0-5, 2=6-8+5, 3=5}
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireReponse) - réponse renvoyée : 5365
+2019-04-17 18:37:12.558 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-17 18:37:12.558 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:37:12.558 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:37:12.558 DEBUG [Gestion] (comparer) - combinaisonA : 5475 combinaisonD : 5365 modèle renvoyé : =++=
+2019-04-17 18:37:12.558 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:37:12.558 DEBUG [Joueur] (afficherModele) - modèle affiché : =++=
+2019-04-17 18:37:12.558 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:37:12.558 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-17 18:37:12.558 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
+2019-04-17 18:37:12.558 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=3+0-5, 2=6-8+5, 3=5}
+2019-04-17 18:37:12.558 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=+3+0-5, 2=6-8+5, 3=5}
+2019-04-17 18:37:12.558 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - chaîne lue : +3+0-5
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - +
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - 3
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - nouveau Min : 3
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - +
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - 0
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMaximum) - chaîne lue : +3+0-5
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMaximum) - -
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMaximum) - 5
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMaximum) - nouveau Min : 5
+2019-04-17 18:37:12.558 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (parcourir) - valeur 4 associée à la clé 1 est nouvelle  : true
+2019-04-17 18:37:12.558 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:12.558 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=+3+0-5, 2=6-8+5, 3=5}
+2019-04-17 18:37:12.558 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=4+3+0-5, 2=6-8+5, 3=5}
+2019-04-17 18:37:12.558 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.558 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=4+3+0-5, 2=6-8+5, 3=5}
+2019-04-17 18:37:12.558 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=4+3+0-5, 2=+6-8+5, 3=5}
+2019-04-17 18:37:12.558 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - chaîne lue : +6-8+5
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - +
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - 6
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - nouveau Min : 6
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - +
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMinimum) - 5
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMaximum) - chaîne lue : +6-8+5
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMaximum) - -
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMaximum) - 8
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireMaximum) - nouveau Min : 8
+2019-04-17 18:37:12.558 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (parcourir) - valeur 7 associée à la clé 2 est nouvelle  : true
+2019-04-17 18:37:12.558 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:12.558 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=4+3+0-5, 2=+6-8+5, 3=5}
+2019-04-17 18:37:12.558 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=4+3+0-5, 2=7+6-8+5, 3=5}
+2019-04-17 18:37:12.558 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:12.558 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-17 18:37:12.558 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=5, 1=4+3+0-5, 2=7+6-8+5, 3=5}
+2019-04-17 18:37:12.558 TRACE [Historique] (lireReponse) - début de lecture dans  la map
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireReponse) - état de la map : {0=5, 1=4+3+0-5, 2=7+6-8+5, 3=5}
+2019-04-17 18:37:12.558 DEBUG [Historique] (lireReponse) - réponse renvoyée : 5475
+2019-04-17 18:37:12.558 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-17 18:37:12.558 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:37:12.558 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:37:12.558 DEBUG [Gestion] (comparer) - combinaisonA : 5475 combinaisonD : 5475 modèle renvoyé : ====
+2019-04-17 18:37:12.558 TRACE [Mode] (defenseur) - fin mode défenseur
+2019-04-17 18:37:12.558 TRACE [Gestion] (choixRejouer) - ouverture menu "rejouer"
+2019-04-17 18:37:12.558 DEBUG [Gestion] (choixRejouer) - 1=rejouer 2=retour menu 3=quitter
+2019-04-17 18:37:26.700 DEBUG [Gestion] (choixRejouer) - Saisie utilisateur : 2
+2019-04-17 18:37:26.700 TRACE [Gestion] (choixRejouer) - fermeture du menu "rejouer"
+2019-04-17 18:37:26.700 TRACE [Gestion] (choixMode) - ouverture menu "modes"
+2019-04-17 18:37:26.700 DEBUG [Gestion] (choixMode) - 1=challenger 2=défenseur 3=duel
+2019-04-17 18:37:28.022 DEBUG [Gestion] (choixMode) - Saisie utilisateur : 3
+2019-04-17 18:37:28.022 TRACE [Gestion] (choixMode) - fermture du menu "modes"
+2019-04-17 18:37:28.022 DEBUG [Gestion] (choixMode) - choix renvoyé : 3
+2019-04-17 18:37:28.022 TRACE [Mode] (duel) - début mode duel
+2019-04-17 18:37:28.022 TRACE [JoueurIA] (genererCombinaison) - début de demande à l'IA de générer une combinaison
+2019-04-17 18:37:28.022 DEBUG [JoueurIA] (genererCombinaison) - 4 chiffre à générer aléatoirement :
+2019-04-17 18:37:28.022 DEBUG [JoueurIA] (genererCombinaison) - chiffre 1 généré : 1
+2019-04-17 18:37:28.022 DEBUG [JoueurIA] (genererCombinaison) - chiffre 2 généré : 1
+2019-04-17 18:37:28.022 DEBUG [JoueurIA] (genererCombinaison) - chiffre 3 généré : 1
+2019-04-17 18:37:28.022 DEBUG [JoueurIA] (genererCombinaison) - chiffre 4 généré : 3
+2019-04-17 18:37:28.022 TRACE [JoueurIA] (genererCombinaison) - fin de demande à l'IA de générer une combinaison
+2019-04-17 18:37:28.022 DEBUG [JoueurIA] (genererCombinaison) - combinaison renvoyée : 1113
+2019-04-17 18:37:28.022 TRACE [JoueurHumain] (genererCombinaison) - début de demande à l'utilisateur de donner une combinaison
+2019-04-17 18:37:30.780 DEBUG [JoueurHumain] (genererCombinaison) - Saisie utilisateur : 5515
+2019-04-17 18:37:30.780 TRACE [JoueurHumain] (genererCombinaison) - fin de demande à l'utilisateur de donner une combinaison
+2019-04-17 18:37:30.780 TRACE [Historique] (initialiser) - début initialistion map historique
+2019-04-17 18:37:30.780 DEBUG [Historique] (initialiser) - état de la map : {0=, 1=, 2=, 3=}
+2019-04-17 18:37:30.780 TRACE [Historique] (initialiser) - fin initialistion map historique
+2019-04-17 18:37:30.780 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:37:30.780 DEBUG [Joueur] (afficherModele) - modèle affiché : XXXX
+2019-04-17 18:37:30.780 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:37:30.780 TRACE [JoueurHumain] (genererReponse) - début de demande à l'utilisateur de donner une réponse
+2019-04-17 18:37:34.305 DEBUG [JoueurHumain] (genererReponse) - Saisie utilisateur : 5555
+2019-04-17 18:37:34.305 TRACE [JoueurHumain] (genererReponse) - fin de demande à l'utilisateur de donner une réponse
+2019-04-17 18:37:34.305 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:37:34.305 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:37:34.305 DEBUG [Gestion] (comparer) - combinaisonA : 1113 combinaisonD : 5555 modèle renvoyé : ----
+2019-04-17 18:37:34.305 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:37:34.305 DEBUG [Joueur] (afficherModele) - modèle affiché : XXXX
+2019-04-17 18:37:34.305 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:37:34.305 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-17 18:37:34.305 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:34.305 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=, 1=, 2=, 3=}
+2019-04-17 18:37:34.305 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=, 2=, 3=}
+2019-04-17 18:37:34.305 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:34.305 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:34.305 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=, 2=, 3=}
+2019-04-17 18:37:34.305 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=, 3=}
+2019-04-17 18:37:34.305 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:34.305 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:34.305 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=, 3=}
+2019-04-17 18:37:34.305 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=5, 3=}
+2019-04-17 18:37:34.305 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:34.305 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:34.305 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=5, 3=}
+2019-04-17 18:37:34.305 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=5, 3=5}
+2019-04-17 18:37:34.305 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:34.305 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-17 18:37:34.305 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=5, 1=5, 2=5, 3=5}
+2019-04-17 18:37:34.305 TRACE [Historique] (lireReponse) - début de lecture dans  la map
+2019-04-17 18:37:34.305 DEBUG [Historique] (lireReponse) - état de la map : {0=5, 1=5, 2=5, 3=5}
+2019-04-17 18:37:34.305 DEBUG [Historique] (lireReponse) - réponse renvoyée : 5555
+2019-04-17 18:37:34.305 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-17 18:37:34.305 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:37:34.305 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:37:34.305 DEBUG [Gestion] (comparer) - combinaisonA : 5515 combinaisonD : 5555 modèle renvoyé : ==-=
+2019-04-17 18:37:34.305 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:37:34.305 DEBUG [Joueur] (afficherModele) - modèle affiché : ----
+2019-04-17 18:37:34.305 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:37:34.305 TRACE [JoueurHumain] (genererReponse) - début de demande à l'utilisateur de donner une réponse
+2019-04-17 18:37:37.399 DEBUG [JoueurHumain] (genererReponse) - Saisie utilisateur : 3333
+2019-04-17 18:37:37.399 TRACE [JoueurHumain] (genererReponse) - fin de demande à l'utilisateur de donner une réponse
+2019-04-17 18:37:37.399 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:37:37.399 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:37:37.399 DEBUG [Gestion] (comparer) - combinaisonA : 1113 combinaisonD : 3333 modèle renvoyé : ---=
+2019-04-17 18:37:37.399 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:37:37.399 DEBUG [Joueur] (afficherModele) - modèle affiché : ==-=
+2019-04-17 18:37:37.399 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:37:37.399 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-17 18:37:37.399 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
+2019-04-17 18:37:37.399 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:37.399 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=5, 3=5}
+2019-04-17 18:37:37.399 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=-5, 3=5}
+2019-04-17 18:37:37.399 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:37.399 DEBUG [Historique] (lireMinimum) - chaîne lue : -5
+2019-04-17 18:37:37.399 DEBUG [Historique] (lireMaximum) - chaîne lue : -5
+2019-04-17 18:37:37.399 DEBUG [Historique] (lireMaximum) - -
+2019-04-17 18:37:37.399 DEBUG [Historique] (lireMaximum) - 5
+2019-04-17 18:37:37.399 DEBUG [Historique] (lireMaximum) - nouveau Min : 5
+2019-04-17 18:37:37.399 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:37.399 DEBUG [Historique] (parcourir) - valeur 3 associée à la clé 2 est nouvelle  : true
+2019-04-17 18:37:37.399 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:37.399 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:37.399 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=-5, 3=5}
+2019-04-17 18:37:37.399 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=3-5, 3=5}
+2019-04-17 18:37:37.399 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:37.399 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-17 18:37:37.399 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=5, 1=5, 2=3-5, 3=5}
+2019-04-17 18:37:37.399 TRACE [Historique] (lireReponse) - début de lecture dans  la map
+2019-04-17 18:37:37.399 DEBUG [Historique] (lireReponse) - état de la map : {0=5, 1=5, 2=3-5, 3=5}
+2019-04-17 18:37:37.399 DEBUG [Historique] (lireReponse) - réponse renvoyée : 5535
+2019-04-17 18:37:37.399 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-17 18:37:37.399 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:37:37.399 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:37:37.399 DEBUG [Gestion] (comparer) - combinaisonA : 5515 combinaisonD : 5535 modèle renvoyé : ==-=
+2019-04-17 18:37:37.399 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:37:37.399 DEBUG [Joueur] (afficherModele) - modèle affiché : ---=
+2019-04-17 18:37:37.399 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:37:37.399 TRACE [JoueurHumain] (genererReponse) - début de demande à l'utilisateur de donner une réponse
+2019-04-17 18:37:40.158 DEBUG [JoueurHumain] (genererReponse) - Saisie utilisateur : 1113
+2019-04-17 18:37:40.158 TRACE [JoueurHumain] (genererReponse) - fin de demande à l'utilisateur de donner une réponse
+2019-04-17 18:37:40.158 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:37:40.158 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:37:40.158 DEBUG [Gestion] (comparer) - combinaisonA : 1113 combinaisonD : 1113 modèle renvoyé : ====
+2019-04-17 18:37:40.158 TRACE [Joueur] (afficherModele) - affichage du modèle
+2019-04-17 18:37:40.158 DEBUG [Joueur] (afficherModele) - modèle affiché : ==-=
+2019-04-17 18:37:40.158 TRACE [Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-17 18:37:40.158 TRACE [JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-17 18:37:40.158 DEBUG [JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
+2019-04-17 18:37:40.158 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:40.158 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=3-5, 3=5}
+2019-04-17 18:37:40.158 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=-3-5, 3=5}
+2019-04-17 18:37:40.158 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:40.158 DEBUG [Historique] (lireMinimum) - chaîne lue : -3-5
+2019-04-17 18:37:40.158 DEBUG [Historique] (lireMaximum) - chaîne lue : -3-5
+2019-04-17 18:37:40.158 DEBUG [Historique] (lireMaximum) - -
+2019-04-17 18:37:40.158 DEBUG [Historique] (lireMaximum) - 3
+2019-04-17 18:37:40.158 DEBUG [Historique] (lireMaximum) - nouveau Min : 3
+2019-04-17 18:37:40.158 DEBUG [Historique] (lireMaximum) - -
+2019-04-17 18:37:40.158 DEBUG [Historique] (lireMaximum) - 5
+2019-04-17 18:37:40.158 TRACE [Historique] (parcourir) - début de lecture de la map
+2019-04-17 18:37:40.158 DEBUG [Historique] (parcourir) - valeur 2 associée à la clé 2 est nouvelle  : true
+2019-04-17 18:37:40.158 TRACE [Historique] (parcourir) - fin de lecture de la map
+2019-04-17 18:37:40.158 TRACE [Historique] (ajouter) - début d'ajout dans la map
+2019-04-17 18:37:40.158 DEBUG [Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=-3-5, 3=5}
+2019-04-17 18:37:40.158 DEBUG [Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=2-3-5, 3=5}
+2019-04-17 18:37:40.158 TRACE [Historique] (ajouter) - fin d'ajout dans la map
+2019-04-17 18:37:40.158 TRACE [JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-17 18:37:40.158 DEBUG [JoueurIA] (genererReponse) - map renvoyée : {0=5, 1=5, 2=2-3-5, 3=5}
+2019-04-17 18:37:40.158 TRACE [Historique] (lireReponse) - début de lecture dans  la map
+2019-04-17 18:37:40.158 DEBUG [Historique] (lireReponse) - état de la map : {0=5, 1=5, 2=2-3-5, 3=5}
+2019-04-17 18:37:40.158 DEBUG [Historique] (lireReponse) - réponse renvoyée : 5525
+2019-04-17 18:37:40.158 TRACE [Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-17 18:37:40.158 TRACE [Gestion] (comparer) - début comparaison des combinaisons
+2019-04-17 18:37:40.158 TRACE [Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-17 18:37:40.158 DEBUG [Gestion] (comparer) - combinaisonA : 5515 combinaisonD : 5525 modèle renvoyé : ==-=
+2019-04-17 18:37:40.158 TRACE [Mode] (duel) - fin mode duel
+2019-04-17 18:37:40.158 TRACE [Gestion] (choixRejouer) - ouverture menu "rejouer"
+2019-04-17 18:37:40.158 DEBUG [Gestion] (choixRejouer) - 1=rejouer 2=retour menu 3=quitter
+2019-04-17 18:38:04.886 DEBUG [Gestion] (choixRejouer) - Saisie utilisateur : 3
+2019-04-17 18:38:04.886 TRACE [Gestion] (choixRejouer) - fermeture du menu "rejouer"
+2019-04-17 18:38:04.886 TRACE [Gestion] (auRevoir) - affichage message d'au revoir
+2019-04-17 18:38:04.886 INFO  [Main] (main) - fin du jeu
