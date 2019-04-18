@@ -22,7 +22,4 @@ public class Chargement {
         return developpeur;
     }
 
-    public void setDeveloppeur(boolean developpeur) {
-        this.developpeur = developpeur;
-    }
 }
