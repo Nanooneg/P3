@@ -1,8 +1,9 @@
+package com.nanoo.p3.jeu;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Historique {

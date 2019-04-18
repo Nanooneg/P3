@@ -1,3 +1,5 @@
+package com.nanoo.p3.joueur;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -9,7 +11,7 @@ public abstract class Joueur {
 
     /**
      * affiche la Combinaison masquée
-     * XXXX au départ pui +=+- en fonction des réponses du joueur défenseur
+     * XXXX au départ pui +=+- en fonction des réponses du com.nanoo.p3.joueur défenseur
      * @param modele modéle masqué à afficher
      * @param level nombre de case de la Combinaison
      * @param developpeur mode développeur on/off
@@ -25,14 +27,18 @@ public abstract class Joueur {
                 modele += "X";
             }
             if (developpeur)
-                System.out.println(combinaison+ " <== SOLUTION - Mode developpeur : ON");
-            System.out.println(modele);
-            logger.debug("modèle affiché : " +modele);
+                System.out.println(modele+ " => " +combinaison+ " <= SOLUTION - mode développeur : ON");
+            else {
+                System.out.println(modele);
+                logger.debug("modèle affiché : " + modele);
+            }
         }else {
             if (developpeur)
-                System.out.println(combinaison+ " <== SOLUTION - Mode developpeur : ON");
-            System.out.println(modele);
-            logger.debug("modèle affiché : " +modele);
+                System.out.println(modele+ " => " +combinaison+ " <= SOLUTION - mode développeur : ON");
+            else {
+                System.out.println(modele);
+                logger.debug("modèle affiché : " + modele);
+            }
         }
 
         logger.trace("fin d'affichage du modèle");

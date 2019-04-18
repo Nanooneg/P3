@@ -1,3 +1,5 @@
+package com.nanoo.p3.gestion;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -164,7 +166,7 @@ public class Gestion {
 
     /**
      * Change la couleur de la police de la console en fonction du cas
-     * - bleu : joueur humain joue
+     * - bleu : com.nanoo.p3.joueur humain joue
      * - jaune : IA joue
      * - blanc : menu
      * @param cas cas sités au-dessus

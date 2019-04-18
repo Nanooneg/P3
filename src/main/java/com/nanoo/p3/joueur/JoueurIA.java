@@ -1,3 +1,6 @@
+package com.nanoo.p3.joueur;
+
+import com.nanoo.p3.jeu.Historique;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

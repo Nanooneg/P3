@@ -1,3 +1,8 @@
+package com.nanoo.p3.jeu;
+
+import com.nanoo.p3.gestion.Gestion;
+import com.nanoo.p3.joueur.JoueurHumain;
+import com.nanoo.p3.joueur.JoueurIA;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +19,7 @@ public class Mode {
     private Historique historique = new Historique();
 
     /**
-     * Lance le mode Challenger (le joueur humain doit trouver la combinaison générée par l'IA)
+     * Lance le mode Challenger (le com.nanoo.p3.joueur humain doit trouver la combinaison générée par l'IA)
      * @param coupMax maximum de coup(s) alloués pour trouvé la bonne réponse
      * @param caseCombinaison nombre de chiffre qui composent la combinaison à trouver
      * @param developpeur mode développeur activé ou non ( on : affiche la solution à l'écran)
@@ -47,7 +52,7 @@ public class Mode {
 
 
     /**
-     * lance le mode Défenseur (L'IA doit trouver la combinaison donnée par le joueur humain)
+     * lance le mode Défenseur (L'IA doit trouver la combinaison donnée par le com.nanoo.p3.joueur humain)
      * @param coupMax maximum de coup(s) alloués pour trouvé la bonne réponse
      * @param caseCombinaison nombre de chiffre qui composent la combinaison à trouver
      * @param developpeur mode développeur activé ou non ( on : affiche la solution à l'écran)
@@ -79,8 +84,8 @@ public class Mode {
     }
 
     /**
-     * Lance le mode Duel (Le joueur humain et l'Ia joue à tour de rôle pour
-     * trouver la combinaison de l'autre joueur)
+     * Lance le mode Duel (Le com.nanoo.p3.joueur humain et l'Ia joue à tour de rôle pour
+     * trouver la combinaison de l'autre com.nanoo.p3.joueur)
      * @param coupMax maximum de coup(s) alloués pour trouvé la bonne réponse
      * @param caseCombinaison nombre de chiffre qui composent la combinaison à trouver
      * @param developpeur mode développeur activé ou non ( on : affiche la solution à l'écran)

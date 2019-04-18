@@ -34,12 +34,12 @@ Combinaison
     comparer
     generer
 		
-Gestion
+com.nanoo.p3.gestion.Gestion
 	afficher()      afficher le but du jeu
 
 
 recherchePlusOuMoins
-	Gestion.afficher()
+	com.nanoo.p3.gestion.Gestion.afficher()
 	combinaisonAttaquant.demander() ou generer()
 	boucle :
 		combinaisonModele.afficher()
@@ -55,12 +55,12 @@ recherchePlusOuMoins
 
 A FAIRE
 
-    creer class Main
-    creer class Joueur
-    creer class JoueurHumain qui etend Joueur
-    creer class JoueurIA qui etend Joueur
+    creer class com.nanoo.p3.main.Main
+    creer class com.nanoo.p3.joueur.Joueur
+    creer class com.nanoo.p3.joueur.JoueurHumain qui etend com.nanoo.p3.joueur.Joueur
+    creer class com.nanoo.p3.joueur.JoueurIA qui etend com.nanoo.p3.joueur.Joueur
 
-Joueur
+com.nanoo.p3.joueur.Joueur
     genererCombinaison
     genererReponse
 

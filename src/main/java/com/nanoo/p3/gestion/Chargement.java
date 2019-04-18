@@ -1,8 +1,10 @@
+package com.nanoo.p3.gestion;
+
 import java.util.ResourceBundle;
 
 public class Chargement {
 
-    private ResourceBundle chargement = ResourceBundle.getBundle("config");
+    private ResourceBundle chargement = ResourceBundle.getBundle("config.config");
 
     private int caseCombinaison = Integer.parseInt(chargement.getString("caseCombinaison"));
     private int coupMax = Integer.parseInt(chargement.getString("coupMax"));
@@ -18,5 +20,9 @@ public class Chargement {
 
     public boolean isDeveloppeur() {
         return developpeur;
+    }
+
+    public void setDeveloppeur(boolean developpeur) {
+        this.developpeur = developpeur;
     }
 }
