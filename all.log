@@ -1,0 +1,292 @@
+2019-04-18 10:55:41.966 INFO  [com.nanoo.p3.main.Main] (main) - début du jeu
+2019-04-18 10:55:41.981 TRACE [com.nanoo.p3.main.Main] (main) - Chargement des paramètres
+2019-04-18 10:55:41.981 DEBUG [com.nanoo.p3.main.Main] (main) - caseCombinaison = 4
+2019-04-18 10:55:41.981 DEBUG [com.nanoo.p3.main.Main] (main) - coupMax = 10
+2019-04-18 10:55:41.981 DEBUG [com.nanoo.p3.main.Main] (main) - modeDeveloppeur = false
+2019-04-18 10:55:41.981 TRACE [com.nanoo.p3.gestion.Gestion] (presenter) - affichage de la présentation du jeu
+2019-04-18 10:55:41.981 TRACE [com.nanoo.p3.gestion.Gestion] (choixMode) - ouverture menu "modes"
+2019-04-18 10:55:41.981 DEBUG [com.nanoo.p3.gestion.Gestion] (choixMode) - 1=challenger 2=défenseur 3=duel
+2019-04-18 10:55:45.655 DEBUG [com.nanoo.p3.gestion.Gestion] (choixMode) - Saisie utilisateur : 2
+2019-04-18 10:55:45.655 TRACE [com.nanoo.p3.gestion.Gestion] (choixMode) - fermture du menu "modes"
+2019-04-18 10:55:45.655 DEBUG [com.nanoo.p3.gestion.Gestion] (choixMode) - choix renvoyé : 2
+2019-04-18 10:55:45.655 TRACE [com.nanoo.p3.jeu.Mode] (defenseur) - début mode défenseur
+2019-04-18 10:55:45.655 TRACE [com.nanoo.p3.joueur.JoueurHumain] (genererCombinaison) - début de demande à l'utilisateur de donner une combinaison
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.joueur.JoueurHumain] (genererCombinaison) - Saisie utilisateur : 9143
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.joueur.JoueurHumain] (genererCombinaison) - fin de demande à l'utilisateur de donner une combinaison
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (initialiser) - début initialistion map historique
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (initialiser) - état de la map : {0=, 1=, 2=, 3=}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (initialiser) - fin initialistion map historique
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.joueur.Joueur] (afficherModele) - affichage du modèle
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.joueur.Joueur] (afficherModele) - modèle affiché : XXXX
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.joueur.Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=, 1=, 2=, 3=}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=, 2=, 3=}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=5, 1=, 2=, 3=}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=, 3=}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=, 3=}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=5, 3=}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=5, 3=}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=5, 1=5, 2=5, 3=5}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - map renvoyée : {0=5, 1=5, 2=5, 3=5}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (lireReponse) - début de lecture dans  la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireReponse) - état de la map : {0=5, 1=5, 2=5, 3=5}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireReponse) - réponse renvoyée : 5555
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.gestion.Gestion] (comparer) - début comparaison des combinaisons
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.gestion.Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.gestion.Gestion] (comparer) - combinaisonA : 9143 combinaisonD : 5555 modèle renvoyé : +---
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.joueur.Joueur] (afficherModele) - affichage du modèle
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.joueur.Joueur] (afficherModele) - modèle affiché : +---
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.joueur.Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=5, 1=5, 2=5, 3=5}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=+5, 1=5, 2=5, 3=5}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - chaîne lue : +5
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - +
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - 5
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - nouveau Min : 5
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - chaîne lue : +5
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - début de lecture de la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (parcourir) - valeur 8 associée à la clé 0 est nouvelle  : true
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - fin de lecture de la map
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=+5, 1=5, 2=5, 3=5}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=8+5, 1=5, 2=5, 3=5}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=8+5, 1=5, 2=5, 3=5}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=8+5, 1=-5, 2=5, 3=5}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - chaîne lue : -5
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - chaîne lue : -5
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 5
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - nouveau Min : 5
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - début de lecture de la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (parcourir) - valeur 4 associée à la clé 1 est nouvelle  : true
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - fin de lecture de la map
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=8+5, 1=-5, 2=5, 3=5}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=8+5, 1=4-5, 2=5, 3=5}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=8+5, 1=4-5, 2=5, 3=5}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=8+5, 1=4-5, 2=-5, 3=5}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - chaîne lue : -5
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - chaîne lue : -5
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 5
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - nouveau Min : 5
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - début de lecture de la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (parcourir) - valeur 4 associée à la clé 2 est nouvelle  : true
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - fin de lecture de la map
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=8+5, 1=4-5, 2=-5, 3=5}
+2019-04-18 10:55:47.499 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=8+5, 1=4-5, 2=4-5, 3=5}
+2019-04-18 10:55:47.499 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=8+5, 1=4-5, 2=4-5, 3=5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=8+5, 1=4-5, 2=4-5, 3=-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - chaîne lue : -5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - chaîne lue : -5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - nouveau Min : 5
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - début de lecture de la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (parcourir) - valeur 1 associée à la clé 3 est nouvelle  : true
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - fin de lecture de la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=8+5, 1=4-5, 2=4-5, 3=-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=8+5, 1=4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - map renvoyée : {0=8+5, 1=4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (lireReponse) - début de lecture dans  la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireReponse) - état de la map : {0=8+5, 1=4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireReponse) - réponse renvoyée : 8441
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.gestion.Gestion] (comparer) - début comparaison des combinaisons
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.gestion.Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.gestion.Gestion] (comparer) - combinaisonA : 9143 combinaisonD : 8441 modèle renvoyé : +-=+
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.Joueur] (afficherModele) - affichage du modèle
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.joueur.Joueur] (afficherModele) - modèle affiché : +-=+
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=8+5, 1=4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=+8+5, 1=4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - chaîne lue : +8+5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - +
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - 8
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - nouveau Min : 8
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - +
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - 5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - chaîne lue : +8+5
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - début de lecture de la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (parcourir) - valeur 9 associée à la clé 0 est nouvelle  : true
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - fin de lecture de la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=+8+5, 1=4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=9+8+5, 1=4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=-4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - chaîne lue : -4-5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - chaîne lue : -4-5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 4
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - nouveau Min : 4
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 5
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - début de lecture de la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (parcourir) - valeur 3 associée à la clé 1 est nouvelle  : true
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - fin de lecture de la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=9+8+5, 1=-4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=3-4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=9+8+5, 1=3-4-5, 2=4-5, 3=1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=3-4-5, 2=4-5, 3=+1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - chaîne lue : +1-5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - +
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - 1
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - nouveau Min : 1
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - chaîne lue : +1-5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - nouveau Min : 5
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - début de lecture de la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (parcourir) - valeur 2 associée à la clé 3 est nouvelle  : true
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - fin de lecture de la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=9+8+5, 1=3-4-5, 2=4-5, 3=+1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=3-4-5, 2=4-5, 3=2+1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - map renvoyée : {0=9+8+5, 1=3-4-5, 2=4-5, 3=2+1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (lireReponse) - début de lecture dans  la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireReponse) - état de la map : {0=9+8+5, 1=3-4-5, 2=4-5, 3=2+1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireReponse) - réponse renvoyée : 9342
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.gestion.Gestion] (comparer) - début comparaison des combinaisons
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.gestion.Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.gestion.Gestion] (comparer) - combinaisonA : 9143 combinaisonD : 9342 modèle renvoyé : =-=+
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.Joueur] (afficherModele) - affichage du modèle
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.joueur.Joueur] (afficherModele) - modèle affiché : =-=+
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=9+8+5, 1=3-4-5, 2=4-5, 3=2+1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=-3-4-5, 2=4-5, 3=2+1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - chaîne lue : -3-4-5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - chaîne lue : -3-4-5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 3
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - nouveau Min : 3
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 4
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 5
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - début de lecture de la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (parcourir) - valeur 2 associée à la clé 1 est nouvelle  : true
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - fin de lecture de la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=9+8+5, 1=-3-4-5, 2=4-5, 3=2+1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=2-3-4-5, 2=4-5, 3=2+1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=9+8+5, 1=2-3-4-5, 2=4-5, 3=2+1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=2-3-4-5, 2=4-5, 3=+2+1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - chaîne lue : +2+1-5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - +
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - 2
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - nouveau Min : 2
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - +
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - 1
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - chaîne lue : +2+1-5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - nouveau Min : 5
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - début de lecture de la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (parcourir) - valeur 3 associée à la clé 3 est nouvelle  : true
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - fin de lecture de la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=9+8+5, 1=2-3-4-5, 2=4-5, 3=+2+1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=2-3-4-5, 2=4-5, 3=3+2+1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - map renvoyée : {0=9+8+5, 1=2-3-4-5, 2=4-5, 3=3+2+1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (lireReponse) - début de lecture dans  la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireReponse) - état de la map : {0=9+8+5, 1=2-3-4-5, 2=4-5, 3=3+2+1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireReponse) - réponse renvoyée : 9243
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.gestion.Gestion] (comparer) - début comparaison des combinaisons
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.gestion.Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.gestion.Gestion] (comparer) - combinaisonA : 9143 combinaisonD : 9243 modèle renvoyé : =-==
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.Joueur] (afficherModele) - affichage du modèle
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.joueur.Joueur] (afficherModele) - modèle affiché : =-==
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.Joueur] (afficherModele) - fin d'affichage du modèle
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - début de demande à l'IA de générer une réponse
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - 4 valeur(s) à ajouter à la mémoire :
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=9+8+5, 1=2-3-4-5, 2=4-5, 3=3+2+1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=-2-3-4-5, 2=4-5, 3=3+2+1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMinimum) - chaîne lue : -2-3-4-5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - chaîne lue : -2-3-4-5
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 2
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - nouveau Min : 2
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 3
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 4
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - -
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (lireMaximum) - 5
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - début de lecture de la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (parcourir) - valeur 1 associée à la clé 1 est nouvelle  : true
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (parcourir) - fin de lecture de la map
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - début d'ajout dans la map
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map avant ajout : {0=9+8+5, 1=-2-3-4-5, 2=4-5, 3=3+2+1-5}
+2019-04-18 10:55:47.514 DEBUG [com.nanoo.p3.jeu.Historique] (ajouter) - état de la map aprés ajout : {0=9+8+5, 1=1-2-3-4-5, 2=4-5, 3=3+2+1-5}
+2019-04-18 10:55:47.514 TRACE [com.nanoo.p3.jeu.Historique] (ajouter) - fin d'ajout dans la map
+2019-04-18 10:55:47.530 TRACE [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - fin de demande à l'IA de générer une réponse
+2019-04-18 10:55:47.530 DEBUG [com.nanoo.p3.joueur.JoueurIA] (genererReponse) - map renvoyée : {0=9+8+5, 1=1-2-3-4-5, 2=4-5, 3=3+2+1-5}
+2019-04-18 10:55:47.530 TRACE [com.nanoo.p3.jeu.Historique] (lireReponse) - début de lecture dans  la map
+2019-04-18 10:55:47.530 DEBUG [com.nanoo.p3.jeu.Historique] (lireReponse) - état de la map : {0=9+8+5, 1=1-2-3-4-5, 2=4-5, 3=3+2+1-5}
+2019-04-18 10:55:47.530 DEBUG [com.nanoo.p3.jeu.Historique] (lireReponse) - réponse renvoyée : 9143
+2019-04-18 10:55:47.530 TRACE [com.nanoo.p3.jeu.Historique] (lireReponse) - fin de lecture dans  la map
+2019-04-18 10:55:47.530 TRACE [com.nanoo.p3.gestion.Gestion] (comparer) - début comparaison des combinaisons
+2019-04-18 10:55:47.530 TRACE [com.nanoo.p3.gestion.Gestion] (comparer) - fin comparaison des combinaisons
+2019-04-18 10:55:47.530 DEBUG [com.nanoo.p3.gestion.Gestion] (comparer) - combinaisonA : 9143 combinaisonD : 9143 modèle renvoyé : ====
+2019-04-18 10:55:47.530 TRACE [com.nanoo.p3.jeu.Mode] (defenseur) - fin mode défenseur
+2019-04-18 10:55:47.530 TRACE [com.nanoo.p3.gestion.Gestion] (choixRejouer) - ouverture menu "rejouer"
+2019-04-18 10:55:47.530 DEBUG [com.nanoo.p3.gestion.Gestion] (choixRejouer) - 1=rejouer 2=retour menu 3=quitter
+2019-04-18 10:55:48.905 DEBUG [com.nanoo.p3.gestion.Gestion] (choixRejouer) - Saisie utilisateur : 3
+2019-04-18 10:55:48.905 TRACE [com.nanoo.p3.gestion.Gestion] (choixRejouer) - fermeture du menu "rejouer"
+2019-04-18 10:55:48.905 TRACE [com.nanoo.p3.gestion.Gestion] (auRevoir) - affichage message d'au revoir
+2019-04-18 10:55:48.905 INFO  [com.nanoo.p3.main.Main] (main) - fin du jeu
