@@ -63,7 +63,6 @@ public class JoueurIA extends Joueur {
             }
             System.out.println("J'ai " +coupMax+ " coup(s) pour trouver : ");
         } else {
-            logger.debug(memoire.size()+ " valeur(s) à ajouter à la mémoire :");
             for (i=0; i<memoire.size(); i++){
                 switch (caractereModele[i]){
                     case '+' :

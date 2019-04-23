@@ -37,14 +37,10 @@ public class Historique {
         logger.trace("début d'ajout dans la map");
 
         if (historique.get(cle).isEmpty()) {
-            logger.debug("état de la map avant ajout : " + historique);
             historique.put(cle, ajout);
-            logger.debug("état de la map aprés ajout : " + historique);
         }else {
-            logger.debug("état de la map avant ajout : " + historique);
             ajout += historique.get(cle);
             historique.replace(cle, ajout);
-            logger.debug("état de la map aprés ajout : " + historique);
         }
 
         logger.trace("fin d'ajout dans la map");
@@ -134,7 +130,7 @@ public class Historique {
 
         if (valeurs.equals("")){
             maximum = 9;
-            logger.debug("nouveau Min : " + maximum);
+            logger.debug("nouveau Max : " + maximum);
         }else {
             for (i = 0; i < valeurs.length(); i += 2) {
                 if ((valeurs.substring(i, i + 1)).equals("-")) {
@@ -142,7 +138,7 @@ public class Historique {
                     logger.debug(Integer.parseInt(valeurs.substring(i + 1, i + 2)));
                     if (Integer.parseInt(valeurs.substring(i + 1, i + 2)) < maximum) {
                         maximum = Integer.parseInt(valeurs.substring(i + 1, i + 2));
-                        logger.debug("nouveau Min : " + maximum);
+                        logger.debug("nouveau Max : " + maximum);
                     }
                 }
             }
