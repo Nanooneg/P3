@@ -38,7 +38,7 @@ Quand le programme est lancé en mode développeur, il affiche la solution à ch
 de donner une réponse. Cela sert à tester le bon fonctionnement, ou à battre plus facilement l'ordinateur...
 
 
-# Versio 1.0
+# Version 1.0
 
 # Autheur : NanoO
 
