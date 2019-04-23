@@ -34,6 +34,7 @@ public class Main {
             System.out.println("\n\n------ MODE DEVELOPPEUR ON ------");
             DEVELOPPEUR = true;
             logger.trace("récupération du paramètre \"modeDev\" passé au démarrage");
+            logger.debug("modeDeveloppeur = " +DEVELOPPEUR);
         }
 
         //mode de jeu
