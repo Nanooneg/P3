@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="TRACE">
+<Configuration status="ERROR">
     <Appenders>
         <File name="logP3" fileName="all.log" immediateFlush="false" append="false">
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} %-5level [%C] (%M) - %msg%n"/>
         </File>
     </Appenders>
     <Loggers>
-        <Root level="TRACE">
+        <Root level="ERROR">
             <AppenderRef ref="logP3"/>
         </Root>
     </Loggers>
