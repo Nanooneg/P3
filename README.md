@@ -12,7 +12,7 @@ Il comporte 3 modes de jeu :
  - Duel : Avec l'ordinateur, à tour de rôle, vous essayer de décrouvrir vos combinaisons respectives.
 
 
-#Développement : 
+# Développement : 
 ## Ce programme a été développé avec IntelliJ IDEA 2019 et la Java JDK 11 (11.0.2).
 
 
