@@ -1,4 +1,4 @@
-*.iml/
+*.iml
 # Created by https://www.gitignore.io/api/java,intellij,intellij+iml,intellij+all
 
 ### Intellij ###
@@ -13,7 +13,7 @@
 .idea/**/shelf
 
 # Generated files
-.idea/**/contentModel.xml
+.idea
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
