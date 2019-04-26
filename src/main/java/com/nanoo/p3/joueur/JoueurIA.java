@@ -24,16 +24,16 @@ public class JoueurIA extends Joueur {
 
         int combinaisonRandom[]= new int[nombreChiffre];
         int min = 0, max = 9;
-        int i;
+        int i, taille;
         logger.debug(nombreChiffre+ " chiffre à générer aléatoirement :");
         // choix aleatoire de chiffres pour chaques cases de la Combinaison à définir
-        for (i=0; i<nombreChiffre; i++) {
+        for (i = 0, taille=nombreChiffre; i<taille; i++) {
             combinaisonRandom[i] = min + (int) (Math.random() * ((max - min) + 1));
             logger.debug("chiffre " +(i+1)+ " généré : " +combinaisonRandom[i]);
         }
         // lecture de chaques valeurs de case et ajout à la chaine de caractére à renvoyer
         String combinaison = "";
-        for (i=0; i<nombreChiffre; i++) {
+        for (i = 0, taille = nombreChiffre; i<taille; i++) {
             combinaison += String.valueOf(combinaisonRandom[i]);
         }
 
@@ -56,14 +56,14 @@ public class JoueurIA extends Joueur {
         String temp;
         char[] caractereModele = modele.toCharArray();
 
-        int i, min, max;
+        int i, min, max, taille;
         if (memoire.get(0).isEmpty()){
-            for (i=0; i<memoire.size(); i++) {
+            for (i = 0, taille = memoire.size(); i<taille; i++) {
                 historique.ajouter(memoire,i,"5");
             }
             System.out.println("J'ai " +coupMax+ " coup(s) pour trouver : ");
         } else {
-            for (i=0; i<memoire.size(); i++){
+            for (i = 0, taille = memoire.size(); i<taille; i++){
                 switch (caractereModele[i]){
                     case '+' :
                         historique.ajouter(memoire,i,"+");

@@ -15,6 +15,8 @@ Il comporte 3 modes de jeu :
 # Développement : 
 ## Ce programme a été développé avec IntelliJ IDEA 2019 et la Java JDK 11 (11.0.2).
 
+Utilisation de Log4J pour générer les logs.
+
 
 # Installation : 
 ## Si ce n'est pas encore fait, importez l'emsemble du répertoire P3 depuis GitHub.
@@ -27,7 +29,7 @@ Il contient 2 fichiers indispensable à la compilation du programme :
 avant de lancer le jeu : Nombre de chiffre de la combinaison / nombre de coup maximum / mode développeur ).
 
  - Log4j2.xml : des logs ont été ajoutés au code. A chaque lancement du programme, ils sont générés dans le fichier
-de log "all.log". Vous pouvez consulté les informations sur le déroulement du programme (dernier lancement seuklement).
+de log "all.log". Vous pouvez consulté les informations sur le déroulement du programme (dernier lancement seulement).
 
 
 # Lancement : 

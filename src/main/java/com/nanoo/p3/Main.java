@@ -1,4 +1,4 @@
-package com.nanoo.p3.main;
+package com.nanoo.p3;
 
 import com.nanoo.p3.gestion.Chargement;
 import com.nanoo.p3.gestion.Gestion;
@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
 
-    //log class com.nanoo.p3.main.Main
+    //log class com.nanoo.p3.Main
     static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class Main {
         logger.debug("coupMax = " +COUP_MAX);
         logger.debug("modeDeveloppeur = " +DEVELOPPEUR);
 
-        //récupération d'argument passé au démarrage
+        //récupération d'un argument passé au démarrage
         if(args.length > 0 && args[0].equals("true")) {
             System.out.println("\n\n------ MODE DEVELOPPEUR ON ------");
             DEVELOPPEUR = true;

@@ -22,8 +22,8 @@ public abstract class Joueur {
 
         if (modele.equals("")) {
 
-            int i;
-            for (i = 0; i < level; i++){
+            int i, taille;
+            for (i = 0, taille = level; i < taille; i++){
                 modele += "X";
             }
             if (developpeur)
