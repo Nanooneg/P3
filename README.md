@@ -9,7 +9,7 @@ Il comporte 3 modes de jeu :
 
  - Challenger : vous devez trouver la combinaison de l'ordinateur.
  - Défenseur : L'ordinateur essai de trouver votre combinaison.
- - Duel : Avec l'ordinateur, à tour de rôle, vous essayer de décrouvrir vos combinaisons respectives.
+ - Duel : Avec l'ordinateur, à tour de rôle, vous essayer de découvrir vos combinaisons respectives.
 
 
 ## Développement :
@@ -19,10 +19,11 @@ Utilisation de Log4J pour générer les logs.
 
 
 ## Installation :
-### Si ce n'est pas encore fait, importez l'emsemble du répertoire P3 depuis GitHub.
+### Si ce n'est pas encore fait, importez l'ensemble du répertoire P3 depuis GitHub.
+#### Si vous n'êtes pas sous IntelliJ, il vous faut utiliser le code source de la branche test (pas de couleurs dans le terminal)
 
 Le code source est contenu dans "src/main/java" et les ressources dans "src/main/ressources".
-Il est IMPORTANT que le dossier "ressources" soit déclaré comme fichier Ressource.
+Il est IMPORTANT que le dossier "resources" soit déclaré comme fichier Ressource.
 Il contient 2 fichiers indispensable à la compilation du programme :
 
  - config.properties : contient les paramètres du jeu ( Vous pouvez changez ces paramètres dans ce fichier
@@ -46,5 +47,5 @@ Vous pouvez passez en argument "true" pour lancer le programme en mode développ
 
 ## Version 1.0
 
-## Autheur : NanoO
+## Auteur : NanoO
 
