@@ -9,5 +9,6 @@ out/
 # Log file
 *.log
 
-#Personal file
+# Personal file
 notes/
+diaporama/

@@ -8,35 +8,35 @@ import java.util.Scanner;
 
 public class Gestion {
 
-    static final Logger logger = LogManager.getLogger(Gestion.class);
+    private static final Logger logger = LogManager.getLogger(Gestion.class);
 
     private Scanner sc = new Scanner(System.in);
 
     /**
-     * affiche une présentation du jeu recherche +/-
+     * Affiche une présentation du jeu
      */
     public void presenter(){
         logger.trace("affichage de la présentation du jeu");
 
         this.couleurPolice(3);
-        System.out.println("");
-        System.out.println("");
+        System.out.println();
+        System.out.println();
         System.out.println("             Bienvenur dans le jeu <<< Recherche +/- >>>              ");
         System.out.println("       Trouver la bonne Combinaison en un nombre maximal d'essai      ");
-        System.out.println("");
+        System.out.println();
         System.out.println("       A chaque coup, si la bonne réponse n'est pas découverte        ");
         System.out.println("                Je donne des indices dans un modèle :                 ");
-        System.out.println("");
+        System.out.println();
         System.out.println("             + veut dire que le chiffre est trop petit                ");
         System.out.println("             - veut dire que le chiffre est trop grand                ");
         System.out.println("                 = veut dire que le chiffre est bon                   ");
-        System.out.println("");
-        System.out.println("");
+        System.out.println();
+        System.out.println();
 
     }
 
     /**
-     *Propose de choisir le mode de jeu
+     * Affiche un menu de selection des modes de jeu et enregistre la saisie du Joueur
      * @return le choix du mode de jeu
      */
     public int choixMode(){
@@ -44,24 +44,24 @@ public class Gestion {
         logger.debug("1=challenger 2=défenseur 3=duel");
 
         int choix = 0;
-        boolean saisieOk = true;
+        boolean saisieOk;
 
         System.out.println("3 modes de jeu possibles : ");
         System.out.println("1 - Challenger -> Vous essayez de trouver la combinaison de L'IA");
-        System.out.println("2 - Défenseur -> L'IA essai de découvrir votre combinaison");
+        System.out.println("2 - Défenseur -> L'IA essaie de découvrir votre combinaison");
         System.out.println("3 - Duel -> Le mix des deux ! Vous jouez à tour de rôle avec L'IA");
-        System.out.println("");
+        System.out.println();
         System.out.print("Que souhaites-tu faire (1/2/3) : ");
 
         do {
             try {
                 choix = sc.nextInt();
                 logger.debug("Saisie utilisateur : " +choix);
-                saisieOk = (choix >= 1 && choix <= 3);
+                saisieOk = (choix >= 1 && choix <= 3);   // Saisie valide si elle correspond à un choix de menu existant
             } catch (InputMismatchException e) {
                 sc.next();
                 logger.error("Erreur de saisie !!");
-                saisieOk = false;
+                saisieOk = false;   // Si exception, la saisie n'est pas valide (saisie != d'un chiffre)
             }
             if (!saisieOk) {
                 this.couleurPolice(4);
@@ -69,35 +69,33 @@ public class Gestion {
                 this.couleurPolice(3);
                 System.out.print("Que souhaites-tu faire (1/2/3) : ");
             }
-        }while (!saisieOk);
+        }while (!saisieOk);   // on continue de demander un choix à l'utilisateur tant que la saisie n'est pas valide
 
         this.decor("double",true,true);
 
-        logger.trace("fermture du menu \"modes\"");
         logger.debug("choix renvoyé : " +choix);
+        logger.trace("fermeture du menu \"modes\"");
         return choix;
     }
 
     /**
-     * Comapare la Combinaison entrée par le defenseur avec celle de l'attaquant
-     * fait un model de cette Combinaison en remplacant les chiffre :
+     * Compare la combinaison entrée par le défenseur avec celle de l'attaquant
+     * fait un model de cette combinaison en remplacant les chiffres :
      * + si le chiffre est plus grand que l'original
      * - si le chiffre est plus petit que l'original
      * = si le chiffre est le bon
-     * @param combinaison Combinaison à prendre en modèle
-     * @param reponse Combinaison à comparer au modéle
+     * @param combinaison combinaison de l'attaquant
+     * @param reponse combinaison du défenseur
      * @return modéle sous forme de +=+-
      */
     public String comparer (String combinaison, String reponse){
         logger.trace("début comparaison des combinaisons");
 
-        int nombreChiffre = reponse.length();
         String modele = "";
         char[] chiffreCombinaison = combinaison.toCharArray();
         char[] chiffreReponse = reponse.toCharArray();
 
-        int i;
-        for (i=0; i<nombreChiffre; i++) {
+        for (int i = 0, taille = combinaison.length(); i<taille; i++) {
             if (chiffreCombinaison[i] < chiffreReponse[i])
                 modele += "-";
             else if (chiffreCombinaison[i] > chiffreReponse[i])
@@ -106,23 +104,24 @@ public class Gestion {
                 modele += "=";
         }
 
-        logger.trace("fin comparaison des combinaisons");
         logger.debug("combinaisonA : " +combinaison+ " combinaisonD : " +reponse+ " modèle renvoyé : " +modele);
+        logger.trace("fin comparaison des combinaisons");
         return modele;
     }
 
     /**
-     * Propose à la fin d'une partie de : rejouer, changer de jeu ou sortir
-     * @param modeDeJeu mode actuel / partie précédante
+     * Affiche un menu à la fin d'une partie qui propose de : rejouer, changer de jeu ou sortir
+     * @param modeDeJeu mode actuel
      * @return nouveau mode de jeu (4 étant la sortie du programme et 0 un reboot)
      */
-    public int choixRejouer(int modeDeJeu){
+    public int choixRejouer (int modeDeJeu){
         logger.trace("ouverture menu \"rejouer\"");
         logger.debug("1=rejouer 2=retour menu 3=quitter");
-        System.out.print("\033[30m");   //police en Blanc
-        int choix = 0;
-        boolean saisieOk = true;
 
+        int choix = 0;
+        boolean saisieOk;
+
+        this.couleurPolice(3);
         System.out.println("\nMaintenant tu peux : ");
         System.out.println("1 - Rejouer au même jeu");
         System.out.println("2 - Retourner à l'écran de séléction");
@@ -133,11 +132,11 @@ public class Gestion {
             try {
                 choix = sc.nextInt();
                 logger.debug("Saisie utilisateur : " +choix);
-                saisieOk = (choix >= 1 && choix <= 3);
+                saisieOk = (choix >= 1 && choix <= 3);   // Saisie valide si elle correspond à un choix de menu existant
             } catch (InputMismatchException e) {
                 sc.next();
                 logger.error("Erreur de saisie !!");
-                saisieOk = false;
+                saisieOk = false;   // Si exception, la saisie n'est pas valide (saisie != d'un chiffre)
             }
             if (!saisieOk) {
                 this.couleurPolice(4);
@@ -145,17 +144,18 @@ public class Gestion {
                 this.couleurPolice(3);
                 System.out.print("Que souhaites-tu faire (1/2/3) : ");
             }
-        }while (!saisieOk);
+        }while (!saisieOk);   // on continue de demander un choix à l'utilisateur tant que la saisie n'est pas valide
 
+        //en finction du choix de l'utilisateur, on change la valeur de mode de jeu (ou non)
         switch (choix){
-            case 1:
+            case 1:   // même mode de jeu = rejouer
                 this.decor("double",true,true);
                 break;
-            case 2:
+            case 2:   // retour au menu
                 modeDeJeu = 0;
                 this.decor("double",true,true);
                 break;
-            case 3:
+            case 3:   // sortie
                 modeDeJeu = 4;
                 break;
         }
@@ -166,9 +166,10 @@ public class Gestion {
 
     /**
      * Change la couleur de la police de la console en fonction du cas
-     * - bleu : com.nanoo.p3.joueur humain joue
+     * - bleu : humain joue
      * - jaune : IA joue
      * - blanc : menu
+     * COMPATIBLE SEULEMENT AVEC LE TERMINAL D'INTELLIJ
      * @param cas cas sités au-dessus
      */
     public void couleurPolice (int cas){
@@ -176,20 +177,24 @@ public class Gestion {
         switch (cas){
             case 1:
                 System.out.print("\033[34m");   //bleu
+                logger.debug("changement de couleur de police(bleu)");
                 break;
             case 2:
                 System.out.print("\033[33m");   //jaune
+                logger.debug("changement de couleur de police(jaune)");
                 break;
             case 3:
                 System.out.print("\033[30m");   //blanc
+                logger.debug("changement de couleur de police(blanc)");
                 break;
             case 4:
                 System.out.print("\033[31m");   //rouge
+                logger.debug("changement de couleur de police(rouge)");
         }
     }
 
     /**
-     * dispose des éléments de décor au cours du déroulement du jeu
+     * Affiche des éléments de décor
      * Purement esthétique !!!
      * @param cas simple ou double ligne
      * @param retourAvant sauter une ligne avant

@@ -1,15 +1,13 @@
 package com.nanoo.p3;
 
-import com.nanoo.p3.gestion.Chargement;
-import com.nanoo.p3.gestion.Gestion;
+import com.nanoo.p3.gestion.*;
 import com.nanoo.p3.jeu.Mode;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Main {
 
-    //log class com.nanoo.p3.Main
-    static final Logger logger = LogManager.getLogger(Main.class);
+    private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
 
@@ -21,20 +19,19 @@ public class Main {
 
         //récupération des paramétres
         Chargement chargement = new Chargement();
-        int CASE_COMBINAISON = chargement.getCaseCombinaison();
-        int COUP_MAX = chargement.getCoupMax();
-        boolean DEVELOPPEUR = chargement.isDeveloppeur();
+        int CASE_COMBINAISON = chargement.getCaseCombinaison();  // Nombre de chiffres qui composent la combinaison
+        int COUP_MAX = chargement.getCoupMax();                  // Nombre de coups maximum alloués pour le jeu
+        boolean DEVELOPPEUR = chargement.isDeveloppeur();        // Mode développeur : solution affichée à chaque tour
         logger.trace("Chargement des paramètres");
         logger.debug("caseCombinaison = " +CASE_COMBINAISON);
         logger.debug("coupMax = " +COUP_MAX);
-        logger.debug("modeDeveloppeur = " +DEVELOPPEUR);
+        logger.debug("mode développeur = " +DEVELOPPEUR);
 
-        //récupération d'un argument passé au démarrage
+        //récupération d'un argument passé au démarrage qui modifie le paramètre "mode développeur"
         if(args.length > 0 && args[0].equals("true")) {
-            System.out.println("\n\n------ MODE DEVELOPPEUR ON ------");
+            System.out.println("\n\n------ MODE DÉVELOPPEUR ON ------");
             DEVELOPPEUR = true;
-            logger.trace("récupération du paramètre \"modeDev\" passé au démarrage");
-            logger.debug("modeDeveloppeur = " +DEVELOPPEUR);
+            logger.trace("récupération du paramètre\"true\" pour \"modeDev\" passé au démarrage");
         }
 
         //mode de jeu
@@ -44,7 +41,7 @@ public class Main {
         gestion.presenter();
 
         do {
-            if (modeDeJeu==0)
+            if (modeDeJeu == 0)
                 modeDeJeu = gestion.choixMode();
             switch (modeDeJeu) {
                 case 1:

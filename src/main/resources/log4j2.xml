@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="ERROR">
     <Appenders>
-        <File name="logP3" fileName="all.log" immediateFlush="false" append="false">
+        <File name="logP3" fileName="all.log" immediateFlush="true" append="false">
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} %-5level [%C] (%M) - %msg%n"/>
         </File>
     </Appenders>
